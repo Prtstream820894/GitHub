@@ -3,7 +3,7 @@
 #Generated on 1768353430
 
 #EXTINF:-1 tvg-id="hotstar" tvg-name="Ipl Direct Hostar i" group-title="Sports" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/8763/1739203338763-a",   🔴 IPL HINDI MATCH 1
-#EXTHTTP:{"cookie":"hdntl=exp=1776056318~acl=%2f*~id=882bcf3883daae69aa66029fcb5d7a9c~data=hdntl~hmac=c494e3b5372c4789381018e4fa78e1b58bab011cdd78f45c15c5eabc8a95a2b0"}
+#EXTHTTP:{"cookie":"hdntl=exp=1776124843~acl=%2f*~id=da293ba65bb7a7b528450bfba50d366f~data=hdntl~hmac=bc8fb3e456efebe5fed8fd8b36b6b1ba403c1b62a1052cfd55197aa7d2d2601e"}
 #EXTVLCOPT:referrer=https://www.hotstar.com/
 #EXTVLCOPT:origin=https://www.hotstar.com
 #EXTVLCOPT:user-agent=Hotstar;in.startv.hotstar/SportsLover(Android/15)
@@ -13,7 +13,7 @@
 https://livetv.hotstar.com/mp1/gec-india-1540065788/fa6a4f0005ef4f90ab24484d165b0aaf/index.mpd?
 
 #EXTINF:-1 tvg-id="hotstar" tvg-name="Ipl Direct Hostar i" group-title="Sports" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/8763/1739203338763-a",   🔴 IPL HINDI MATCH 1
-#EXTHTTP:{"cookie":"hdntl=exp=1776056318~acl=%2f*~id=882bcf3883daae69aa66029fcb5d7a9c~data=hdntl~hmac=c494e3b5372c4789381018e4fa78e1b58bab011cdd78f45c15c5eabc8a95a2b0"}
+#EXTHTTP:{"cookie":"hdntl=exp=1776124843~acl=%2f*~id=da293ba65bb7a7b528450bfba50d366f~data=hdntl~hmac=bc8fb3e456efebe5fed8fd8b36b6b1ba403c1b62a1052cfd55197aa7d2d2601e"}
 #EXTVLCOPT:referrer=https://www.hotstar.com/
 #EXTVLCOPT:origin=https://www.hotstar.com
 #EXTVLCOPT:user-agent=Hotstar;in.startv.hotstar/SportsLover(Android/15)
@@ -23,8 +23,8 @@ https://livetv.hotstar.com/mp1/gec-india-1540065788/fa6a4f0005ef4f90ab24484d165b
 https://livetv.hotstar.com/mp1/gec-india-1540065782/fce958099ca84fc3b980e651a4a668a8/index.mpd?
 
 
-#EXTINF:-1 tvg-id="hotstar" tvg-name="Hotstar Event" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/8763/1739203338763-a" group-title="Sports", 🔴 IPL HINDI MATCH 2
-#EXTHTTP:{"cookie":"hdntl=exp=1776038442~acl=%2f*~id=ace1b379b9dac2d9e8e35c3945d654d1~data=hdntl~hmac=46e1ded0a1cb45c1054cf0d0710b311d3110068031b95ea126adc4611249853a"}
+#EXTINF:-1 tvg-id="hotstar" tvg-name="Hotstar Event" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/8763/1739203338763-a" group-title="Sports", 🔴 IPL HINDI
+#EXTHTTP:{"cookie":"hdntl=exp=1776124843~acl=%2f*~id=da293ba65bb7a7b528450bfba50d366f~data=hdntl~hmac=bc8fb3e456efebe5fed8fd8b36b6b1ba403c1b62a1052cfd55197aa7d2d2601e"}
 #EXTVLCOPT:origin=https://www.hotstar.com
 #EXTVLCOPT:referrer=https://www.hotstar.com/
 #EXTVLCOPT:user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
