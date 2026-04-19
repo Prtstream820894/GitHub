@@ -1,12 +1,13 @@
 EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 #Generated on 1768353430
 
-#EXTINF:-1 tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i" group-title="Sports",🔴 IPL LIVE MATCH 1
+#EXTINF:-1 tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i" group-title="Sports", 🔴 IPL LIVE (576p)
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
 #EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
-https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8
+https://jcevents.hotstar.com/bpk-tv/2c7182c8e6a22cfa6ebc02bbc9ed6dd0/Fallback/2c7182c8e6a22cfa6ebc02bbc9ed6dd0.m3u8
 
-#EXTINF:-1 tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i" group-title="Sports",🔴 IPL LIVE MATCH 2
+
+#EXTINF:-1 tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i" group-title="Sports",🔴 IPL LIVE (1080p)
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=81872faa1d6b45fa9045cdeb2e310000:9b88168e61274587a471962c46b94675
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
@@ -15,11 +16,14 @@ https://livetv.hotstar.com/mp1/gec-india-1540065788/fa6a4f0005ef4f90ab24484d165b
 
 
 
-
-#EXTINF:-1 tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i" group-title="Sports", 🔴 IPL LIVE MATCH 
+#EXTINF:-1 tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i" group-title="Sports",🔴 IPL LIVE MATCH  2
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
 #EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
-https://jcevents.hotstar.com/bpk-tv/2c7182c8e6a22cfa6ebc02bbc9ed6dd0/Fallback/2c7182c8e6a22cfa6ebc02bbc9ed6dd0.m3u8
+https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8
+
+
+
+
 
 
 
