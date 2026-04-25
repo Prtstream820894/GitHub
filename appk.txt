@@ -30,9 +30,8 @@ https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0
 
 
 
-
 #EXTINF:-1 tvg-id="" tvg-name="IPL Hindi Match 1 4k" tvg-logo="https://iili.io/B6egH9R.png" group-title="IPL{4K} (2026)",IPL Hindi Match 1 4k
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705141.ts
+https://tinyurl.com/link-macha-official-collab-vt1/705141.ts
 #EXTINF:-1 tvg-id="" tvg-name="IPL English Match 1 4k" tvg-logo="https://iili.io/B6egH9R.png" group-title="IPL{4K} (2026)",IPL English Match 1 4k
 https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705142.ts
 #EXTINF:-1 tvg-id="" tvg-name="IPL English Match 2 4k" tvg-logo="https://iili.io/B6egH9R.png" group-title="IPL{4K} (2026)",IPL English Match 2 4k
@@ -82,11 +81,7 @@ https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705164.ts
 #EXTINF:-1 tvg-id="" tvg-name="IPL Bihari Match 1 4k" tvg-logo="https://iili.io/B6egH9R.png" group-title="IPL{4K} (2026)",IPL Bihari Match 1 4k
 https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705165.ts
 
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/703299.ts
-#EXTINF:-1 tvg-id="" tvg-name="ADD FREE WILLOW HINDI MATCH 1" tvg-logo="https://i.ibb.co/7x1Jw8dL/Chat-GPT-Image-Mar-29-2026-01-03-02-AM.png" group-title="IPL{4K} (2026)",ADD FREE WILLOW HINDI MATCH 1
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/703300.ts
-#EXTINF:-1 tvg-id="" tvg-name="ADD FREE WILLOW ENG MATCH 1" tvg-logo="https://i.ibb.co/7x1Jw8dL/Chat-GPT-Image-Mar-29-2026-01-03-02-AM.png" group-title="IPL{4K} (2026)",ADD FREE WILLOW ENG MATCH 1
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/703301.ts
+
 #EXTINF:-1 tvg-id="" tvg-name="IPL Hindi Match 1" tvg-logo="https://iili.io/B6egH9R.png" group-title="IPL{4K} (2026)",IPL Hindi Match 1
 https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705131.ts
 #EXTINF:-1 tvg-id="" tvg-name="IPL English Match 1" tvg-logo="https://iili.io/B6egH9R.png" group-title="IPL{4K} (2026)",IPL English Match 1
