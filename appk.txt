@@ -109,29 +109,6 @@ https://tinyurl.com/link-macha-official-collab-vt1/705164.ts
 #EXTHTTP:{"Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/","User-Agent":"Hotstar;in.startv.hotstar.links_macha_official(Android/15)","Telegram":"@vaathala1","Creator":"@vaathala1"}
 https://tinyurl.com/link-macha-official-collab-vt1/705165.ts
 
-
-#EXTINF:-1 tvg-id="" tvg-name="IPL Hindi Match 1" tvg-logo="https://iili.io/B6vs6gI.png" group-title="IPL{4K} (2026)",IPL Hindi Match 1
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705131.ts
-#EXTINF:-1 tvg-id="" tvg-name="IPL English Match 1" tvg-logo="https://iili.io/B6vs6gI.png" group-title="IPL{4K} (2026)",IPL English Match 1
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705132.ts
-#EXTINF:-1 tvg-id="" tvg-name="IPL Telugu Match 1" tvg-logo="https://iili.io/B6vs6gI.png" group-title="IPL{4K} (2026)",IPL Telugu Match 1
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705133.ts
-#EXTINF:-1 tvg-id="" tvg-name="IPL Tamil Match 1" tvg-logo="https://iili.io/B6vs6gI.png" group-title="IPL{4K} (2026)",IPL Tamil Match 1
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705134.ts
-#EXTINF:-1 tvg-id="" tvg-name="IPL Malayalam Match 1" tvg-logo="https://iili.io/B6vs6gI.png" group-title="IPL{4K} (2026)",IPL Malayalam Match 1
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705135.ts
-#EXTINF:-1 tvg-id="" tvg-name="IPL English Match 2" tvg-logo="https://iili.io/B6vs6gI.png" group-title="IPL{4K} (2026)",IPL English Match 2
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705136.ts
-#EXTINF:-1 tvg-id="" tvg-name="IPL Hindi Match 2" tvg-logo="https://iili.io/B6vs6gI.png" group-title="IPL{4K} (2026)",IPL Hindi Match 2
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705137.ts
-#EXTINF:-1 tvg-id="" tvg-name="IPL Tamil Match 2" tvg-logo="https://iili.io/B6vs6gI.png" group-title="IPL{4K} (2026)",IPL Tamil Match 2
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705138.ts
-#EXTINF:-1 tvg-id="" tvg-name="IPL Telugu Match 2" tvg-logo="https://iili.io/B6vs6gI.png" group-title="IPL{4K} (2026)",IPL Telugu Match 2
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705139.ts
-#EXTINF:-1 tvg-id="" tvg-name="IPL Malayalam Match 2" tvg-logo="https://iili.io/B6vs6gI.png" group-title="IPL{4K} (2026)",IPL Malayalam Match 2
-https://desyra.co:443/live/gRVSxCJCuX/yummy9training/705140.ts
-
-
 ----------=== Entertainment ===---------------
 
 #EXTM3U
