@@ -1,6 +1,7 @@
 EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 #Generated on 1768353430
-EXTINF:-1 group-title="Sports" tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i",IPL HINDI (50)
+
+#EXTINF:-1 group-title="Sports" tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i",IPL HINDI (50)
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/index.mpd?|cookie=__hdnea__=st=1777546817~exp=1777568417~acl=/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/*~hmac=95a6a234a674d62878e6b47aadd1a60698678919d3c757d45fa8d55f4e2c8afe&drmScheme=clearkey&drmLicense=400131994b445d8c8817202248760fda:2d56cb6f07a75b9aff165d534ae2bfc4
 
 #EXTINF:-1 tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i" group-title="Sports", 🔴 IPL HINDI (576p)
