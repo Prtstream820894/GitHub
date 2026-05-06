@@ -2,7 +2,7 @@ EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 #Generated on 1768353430
 
 #EXTINF:-1 group-title="Sports" tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i",Hindi (Stream)
-https://congenial-tribble-jjj9gj5x6ww4f5gw-8080.app.github.dev/live.m3u8
+https://congenial-tribble-jjj9gj5x6ww4f5gw-8080.app.github.dev/stream/live.m3u8
 
 #EXTINF:-1 tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i" group-title="Sports", 🔴 IPL HINDI (576p)
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
