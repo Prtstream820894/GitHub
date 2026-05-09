@@ -1,6 +1,8 @@
 EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 #Generated on 1768353430
 
+#EXTINF:-1 group-title="Sports" tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i",Hindi (Stream)
+https://glowing-space-guide-j9v54wg7v9jc57gv-8080.app.github.dev/stream/live.m3u8
 
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i" group-title="sports",🔴 IPL ENGLISH 
@@ -9,8 +11,7 @@ EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 https://jcevents.hotstar.com/bpk-tv/e03bbf7688f4b14faa3782e78851c3d9_CTV/Fallback/index2.m3u8
 
 
-#EXTINF:-1 group-title="Sports" tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i",Hindi (Stream)
-https://glowing-space-guide-j9v54wg7v9jc57gv-8080.app.github.dev/stream/live.m3u8
+
 
 #EXTINF:-1 tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i" group-title="Sports",🔴 IPL HINDI (1080p)
 #KODIPROP:inputstream.adaptive.license_type=clearkey
