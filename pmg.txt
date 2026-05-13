@@ -1,6 +1,9 @@
 EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 #Generated on 1768353430
 
+#EXTINF:-1 group-title="Sports" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,t_web_m_2x/sources/r1/cms/prod/2920/1778584052920-h",IPL HINDI (Kayo)
+https://dck1-ac-live.cdn.indazn.com/out/v1/814bffb9b389f652/0fb45955afd944b19d988688141c0da3/index.mpd?|drmScheme=clearkey&drmLicense=c18e0a678b70572ca99f9efe1f297f5a:ddf3933d1fbc8c5d1f84870c3b56a22c
+
 #EXTINF:-1 tvg-id="1106" group-title="Sports" tvg-logo="https://iili.io/BmCGvTX.png",Ipl(4K)Hindi
 #EXTHTTP:{"Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/","User-Agent":"Hotstar;in.startv.hotstar.links_macha_official(Android/15)","Telegram":"@vaathala1","Creator":"@vaathala1"}
 http://datahub11.com/live/johannes/johannes123/705131.ts
