@@ -3,30 +3,29 @@ EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 
 
 
-#EXTINF:-1 tvg-id="1106" group-title="Sports" tvg-logo="https://iili.io/BmCGvTX.png",Ipl(4K)Hindi
+#EXTINF:-1 tvg-id="1106" group-title="Sports" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/679/1778765390679-h",Ipl(4K)Hindi
 #EXTHTTP:{"Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/","User-Agent":"Hotstar;in.startv.hotstar.links_macha_official(Android/15)","Telegram":"@vaathala1","Creator":"@vaathala1"}
 http://datahub11.com/live/johannes/johannes123/705131.ts
 
 
-#EXTINF:-1 group-title="Sports" tvg-logo="https://iili.io/BmCGSQs.png",IPL HINDI (Jiotv)
+#EXTINF:-1 group-title="Sports" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/679/1778765390679-h",IPL HINDI (Jiotv)
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/index.mpd?|Cookie=__hdnea__=st=1778758212~exp=1778779812~acl=/bpk-tv/StarMoviesHD_BTS/WDVLive/*~hmac=c688fb468965e67cc7f0bcf78737fb38fa7d706fb6a18eeca2420e48d9ba3db6&drmScheme=clearkey&drmLicense=400131994b445d8c8817202248760fda:2d56cb6f07a75b9aff165d534ae2bfc4
 
 
 
-#EXTINF:-1 tvg-logo="https://iili.io/BmCG8jn.png" group-title="Sports",Hostar HINDI (576p)
+#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/679/1778765390679-h" group-title="Sports",Hostar HINDI (576p)
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
 #EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
 https://jcevents.hotstar.com/bpk-tv/2c7182c8e6a22cfa6ebc02bbc9ed6dd0/Fallback/2c7182c8e6a22cfa6ebc02bbc9ed6dd0.m3u8
 
-#EXTINF:-1 tvg-logo="https://iili.io/BmCG8jn.png" group-title="Sports",IPL HINDI(Hotstar)
+#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/679/1778765390679-h" group-title="Sports",IPL HINDI(Hotstar)
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=81872faa1d6b45fa9045cdeb2e310000:9b88168e61274587a471962c46b94675
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
 #EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
 https://livetv.hotstar.com/mp1/gec-india-1540065788/fa6a4f0005ef4f90ab24484d165b0aaf/index.mpd
 
-#EXTINF:-1 group-title="Sports" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,t_web_m_2x/sources/r1/cms/prod/2920/1778584052920-h",IPL HINDI (Kayo)
-https://dck1-ac-live.cdn.indazn.com/out/v1/814bffb9b389f652/0fb45955afd944b19d988688141c0da3/index.mpd?|drmScheme=clearkey&drmLicense=c18e0a678b70572ca99f9efe1f297f5a:ddf3933d1fbc8c5d1f84870c3b56a22c
+
 
 #EXTM3U
 #EXTINF:-1 tvg-logo="https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/2615/1774449982615-i" group-title="sports",🔴 IPL ENGLISH 
