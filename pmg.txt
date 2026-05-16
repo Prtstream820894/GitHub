@@ -9,7 +9,7 @@ http://datahub11.com/live/johannes/johannes123/705131.ts
 
 
 #EXTINF:-1 group-title="Sports" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/5752/1778847115752-h",IPL HINDI (Jiotv)
-https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/index.mpd?|Cookie=__hdnea__=st=1778835975~exp=1778857575~acl=/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/*~hmac=cf5bc57e11e51031a3910bc1cf83709a19292dc9abf7d6ce222d39c8b1206f82&drmScheme=clearkey&drmLicense=400131994b445d8c8817202248760fda:2d56cb6f07a75b9aff165d534ae2bfc4
+https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/index.mpd?|Cookie=__hdnea__=st=1778935534~exp=1778957134~acl=/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/*~hmac=e8b8d2e69d3586afb5a13923a4481a6fcc2551684bf1d1bd63235481094a1b62&drmScheme=clearkey&drmLicense=400131994b445d8c8817202248760fda:2d56cb6f07a75b9aff165d534ae2bfc4
 
 
 
