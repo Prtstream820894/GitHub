@@ -17,8 +17,12 @@ https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0
 #EXTINF:-1 group-title="Sports" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/4753/1778859124753-h",IPL HINDI (Jiotv)
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/index.mpd?|Cookie=__hdnea__=st=1778988612~exp=1779010212~acl=/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/*~hmac=1d8d1cacb505cf1cdeab334db84ad75f11491f5330fc51014233a7d3db59ef01&drmScheme=clearkey&drmLicense=400131994b445d8c8817202248760fda:2d56cb6f07a75b9aff165d534ae2bfc4
 
+#EXTINF:-1 group-title="Sports" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/4753/1778859124753-h",IPL HINDI (TP)
+https://bpaita3.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/manifest.mpd|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36&Cookie=hdntl=exp=1779071767~acl=%2fbpk-tv%2firdeto_com_Channel_252%2foutput%2f*~id=9441230843~data=hdntl~hmac=ec53ecf6bb7c4992a5b39aee0be7c3a4576bdcb22ed24ff952a85fbf99d79549&drmScheme=clearkey&drmLicense=ap5CBPP4V36_bnmzsYVz-A:eMog1vi-kE7sYcDprKPFEQ
 
-#EXTINF:-1 tvg-logo="https://project-lc4mz.vercel.app/api/img" group-title="Sports", Tata Play Hindi 
+
+
+#EXTINF:-1 tvg-logo="https://project-lc4mz.vercel.app/api/img" group-title="Sports", Tata Play Ipl hindi
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ap5CBPP4V36_bnmzsYVz-A:eMog1vi-kE7sYcDprKPFEQ
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
