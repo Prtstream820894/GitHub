@@ -1,21 +1,20 @@
 EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 #Generated on 1768353430
 
+#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/4293/1779016994293-h" group-title="Sports",Hostar HINDI (576p)
+#EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
+#EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
+https://jcevents.hotstar.com/bpk-tv/2c7182c8e6a22cfa6ebc02bbc9ed6dd0/Fallback/2c7182c8e6a22cfa6ebc02bbc9ed6dd0.m3u8
 
 
-#EXTINF:-1 tvg-id="1106" group-title="Sports" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/4293/1779016994293-h",Ipl(4K)Hindi
-#EXTHTTP:{"Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/","User-Agent":"Hotstar;in.startv.hotstar.links_macha_official(Android/15)","Telegram":"@vaathala1","Creator":"@vaathala1"}
-http://datahub11.com/live/johannes/johannes123/705131.ts
+
 
 #EXTINF:-1 group-title="Sports" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/4293/1779016994293-h",IPL HINDI (Jiotv)
 https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/index.mpd?|Cookie=__hdnea__=st=1779096613~exp=1779118213~acl=/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/*~hmac=b6879ed33931a01805596914cd0fe5278dc932f6a83b051a4873ce83e928d24b&drmScheme=clearkey&drmLicense=400131994b445d8c8817202248760fda:2d56cb6f07a75b9aff165d534ae2bfc4
 
 
 
-#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/4293/1779016994293-h" group-title="Sports",Hostar HINDI (576p)
-#EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
-#EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
-https://jcevents.hotstar.com/bpk-tv/2c7182c8e6a22cfa6ebc02bbc9ed6dd0/Fallback/2c7182c8e6a22cfa6ebc02bbc9ed6dd0.m3u8
+
 
 
 
@@ -45,7 +44,9 @@ https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0
 https://jcevents.hotstar.com/bpk-tv/e03bbf7688f4b14faa3782e78851c3d9_CTV/Fallback/index2.m3u8
 
 
-
+#EXTINF:-1 tvg-id="1106" group-title="Sports" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/4293/1779016994293-h",Ipl(4K)Hindi
+#EXTHTTP:{"Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/","User-Agent":"Hotstar;in.startv.hotstar.links_macha_official(Android/15)","Telegram":"@vaathala1","Creator":"@vaathala1"}
+http://datahub11.com/live/johannes/johannes123/705131.ts
 
 #EXTINF:-1 group-title="Sports" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWvmK05qGp0fmPRzGT529UHstOxw5XzZL116UfJTB8G3v28DHPMyGIKCKq&s=10",PSL live
 https://amg01269-amg01269c1-sportstribal-emea-5204.playouts.now.amagi.tv/playlist/amg01269-willowtvfast-willowplus-sportstribalemea/playlist.m3u8
