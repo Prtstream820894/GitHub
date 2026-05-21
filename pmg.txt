@@ -1,6 +1,13 @@
 EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 #Generated on 1768353430
 
+#EXTINF:-1 tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-60-j5fdr6a0-v1/imageContent-60-j5fdr6a0-m1.png" group-title="Sports",ipl 2026
+#EXTVLCOPT:license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://tata-license.poonamchouhan076.workers.dev//?url=https%3A%2F%2Ftplay.virey40690.workers.dev%2Fkey%2F24
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36
+#EXTHTTP:{"cookie":"hdntl=exp=1779419551~acl=%2fbpk-tv%2firdeto_com_Channel_252%2foutput%2f*~id=9441230843~data=hdntl~hmac=e2eb233746ff72c86e369810b64aa183bf657744854f89fcfb3bb20f03a0112a"}
+https://bpaita3.akamaized.net/bpk-tv/irdeto_com_Channel_252/output/manifest.mpd
+
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,t_web_m_2x/sources/r1/cms/prod/3722/1779273283722-h" group-title="Sports",Hostar HINDI (576p)
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
 #EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
