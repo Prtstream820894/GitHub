@@ -44,6 +44,9 @@ https://jcevents.hotstar.com/bpk-tv/e03bbf7688f4b14faa3782e78851c3d9_CTV/Fallbac
 https://livetv.hotstar.com/mp1/gec-india-1540065788/fa6a4f0005ef4f90ab24484d165b0aaf/index.mpd
 
 
+#EXTINF:-1 group-title="Sports" tvg-logo="https://static.cricbuzz.com/a/img/v1/i1/c998545/match-forecast-pakistan-vs-australia-1st-odi.jpg?d=ultra&p=det",Aus vs Pak Odi
+https://amg01269-amg01269c1-sportstribal-emea-5204.playouts.now.amagi.tv/playlist/amg01269-willowtvfast-willowplus-sportstribalemea/playlist.m3u8
+
 #EXTINF:-1 group-title="Highlights" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,t_web_m_2x/sources/r1/cms/prod/178/1779817080178-h",RCB VS GT (playoff) Highlights (4k)
 https://hssportsprepack.akamaized.net/videos/cricket/1271507153/1540067129/in/hin/v3/4k/1779830404988/hls/plain/master-NBrGubsxnoflVuds_4k.m3u8|referer=https://www.hotstar.com/in
 
@@ -56,8 +59,7 @@ https://qw.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/fb6jy4pxts/out/v
 #EXTHTTP:{"Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/","User-Agent":"Hotstar;in.startv.hotstar.links_macha_official(Android/15)","Telegram":"@vaathala1","Creator":"@vaathala1"}
 http://datahub11.com/live/johannes/johannes123/705131.ts
 
-#EXTINF:-1 group-title="Sports" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWvmK05qGp0fmPRzGT529UHstOxw5XzZL116UfJTB8G3v28DHPMyGIKCKq&s=10",PSL live
-https://amg01269-amg01269c1-sportstribal-emea-5204.playouts.now.amagi.tv/playlist/amg01269-willowtvfast-willowplus-sportstribalemea/playlist.m3u8
+
 
 
 
