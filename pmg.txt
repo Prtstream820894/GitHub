@@ -10,7 +10,7 @@ EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8
 
 #EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/4189/1777913244189-a" group-title="Sports", HINDI JIO HD
-https://jiotvpllive.cdn.jio.com/bpk-tv/StarSportsHD2Hin_BTS/WDVLive/index.mpd?|cookie=%5F%5Fhdnea%5F%5F=st=1781353482~exp=1781375082~acl=/bpk-tv/StarSportsHD2Hin_BTS/WDVLive/*~hmac=1bfd031dccfb753daae5c34f3953aa8925d7ebba099e44072d0a60d4ff163bca&drmScheme=clearkey&drmLicense=bd1ea6a1c1fb5dcdb709434e0826bbc0:f57f22cba32739ce7beb1fab3f3d060b
+https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/index.mpd?|cookie=%5F%5Fhdnea%5F%5F=st=1781443116~exp=1781464716~acl=/bpk-tv/Star_Sports_HD1_Hindi_BTS/WDVLive/*~hmac=fca7bc7eec832ccf17aae42e2d8885912367701d00c2e3c48e70803eb05a3159&drmScheme=clearkey&drmLicense=400131994b445d8c8817202248760fda:2d56cb6f07a75b9aff165d534ae2bfc4
 
 
 #EXTINF:-1 tvg-logo="https://www.womenssportdaily.co.uk/sites/default/files/styles/twitter_summary_large/public/field/image/ICC_0.jpg?itok=9pHwmxcY" group-title="Sports",live cricket Hindi HD1
