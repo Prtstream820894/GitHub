@@ -4,7 +4,7 @@ EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 
 
 
-#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/4189/1777913244189-a" group-title="Sports", Cricket Hindi HD
+#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/9900/1781613829900-h" group-title="Sports", Cricket Hindi HD
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
 #EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8
