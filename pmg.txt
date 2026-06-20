@@ -386,6 +386,5 @@ https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Zeecinema/default/manifest.mpd?
 #EXTHTTP:{"cookie":"__hdnea__=st=1768266662~exp=1768353062~acl=/*~hmac=6a5fa6130a515c6437c0b1afc1a5284a02edebd99ee63a1ef16c6c15d578f444"}
 https://d1g8wgjurz8via.cloudfront.net/bpk-tv/Andpictures/default/manifest.mpd?
 
-#EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://images.slivcdn.com/videoasset_images/manage_file/1000019641/1781543676451606_Tri_Series26_IND_A_vs_AFG_A_portrait_thumb_eng.jpg" group-title="Bollywood movies", Ind A vs Afg A
-https://jiotvmblive.cdn.jio.com/bpk-tv/Ten3_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1768956686~exp=1869043086~acl=/*~hmac=|&user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6&Cookie=__hdnea__=st=1768956686~exp=1869043086~acl=/*~hmac=&drmScheme=clearkey&drmLicense=111e6908b965566e97139efddf7ef459:c87903abbc052e1f21e51ebd928d9cb1
+
 
