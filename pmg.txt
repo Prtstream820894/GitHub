@@ -1,7 +1,8 @@
 EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 #Generated on 1768353430
 
-
+#EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://iili.io/Cu1dLYP.webp" group-title="Sports", Ind vs Ire T-20
+https://jiotvmblive.cdn.jio.com/bpk-tv/Ten3_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1768956686~exp=1869043086~acl=/*~hmac=|&user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6&Cookie=__hdnea__=st=1768956686~exp=1869043086~acl=/*~hmac=&drmScheme=clearkey&drmLicense=111e6908b965566e97139efddf7ef459:c87903abbc052e1f21e51ebd928d9cb1
 
 
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90/sources/r1/cms/prod/9900/1781613829900-h" group-title="Sports",Ind vs Afg Odi
@@ -9,8 +10,7 @@ EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 #EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8
 
-#EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://images.slivcdn.com/videoasset_images/manage_file/1000019641/1781543676451606_Tri_Series26_IND_A_vs_AFG_A_portrait_thumb_eng.jpg" group-title="Sports", Ind A vs Afg A
-https://jiotvmblive.cdn.jio.com/bpk-tv/Ten3_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1768956686~exp=1869043086~acl=/*~hmac=|&user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6&Cookie=__hdnea__=st=1768956686~exp=1869043086~acl=/*~hmac=&drmScheme=clearkey&drmLicense=111e6908b965566e97139efddf7ef459:c87903abbc052e1f21e51ebd928d9cb1
+
 
 
 #EXTINF:-1 tvg-logo="https://www.womenssportdaily.co.uk/sites/default/files/styles/twitter_summary_large/public/field/image/ICC_0.jpg?itok=9pHwmxcY" group-title="Sports",live cricket Hindi HD1
