@@ -5,6 +5,9 @@ EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 https://jiotvmblive.cdn.jio.com/bpk-tv/Ten3_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1768956686~exp=1869043086~acl=/*~hmac=|&user-agent=plaYtv/7.1.5 (Linux;Android 15) ExoPlayerLib/2.11.6&Cookie=__hdnea__=st=1768956686~exp=1869043086~acl=/*~hmac=&drmScheme=clearkey&drmLicense=111e6908b965566e97139efddf7ef459:c87903abbc052e1f21e51ebd928d9cb1
 
 
+
+#EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://images.slivcdn.com/videoasset_images/manage_file/1000020006/1782417237940353_IREvsIND_1st_t20i_25jun_live_portrait_thumb.jpg" group-title="Sports", Hindi Sony Liv 
+https://sonymtmnew-akamaized.pages.dev/hls/live/2105079/cricodi2606/HIN/master.m3u8|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0&Referer=https://www.sonyliv.com/&Origin=https://www.sonyliv.com&x-playback-session-id=80da10c806e4622d7b59afb32d4ef546-1782474600122
 #EXTINF:-1 tvg-logo="https://iili.io/CA1wZUx.png" group-title="Sports", Upcoming series 
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
 #EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
