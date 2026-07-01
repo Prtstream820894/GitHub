@@ -8,7 +8,7 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/Ten3_HD_MOB/WDVLive/index.mpd?__hdnea__=s
 
 
 
-#EXTINF:-1 tvg-logo="https://iili.io/CA1wZUx.png" group-title="Sports", Upcoming series 
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3fHCTs_9KC6E_nHNzHIHb9ZnsRSrBU1Sg1tOIYIfXmJqqVrHL5OGbgIw&s=10" group-title="Sports", Women t-20 WC
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
 #EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8
@@ -16,7 +16,7 @@ https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0
 
 
 
-#EXTINF:-1 tvg-logo="https://www.womenssportdaily.co.uk/sites/default/files/styles/twitter_summary_large/public/field/image/ICC_0.jpg?itok=9pHwmxcY" group-title="Sports",live cricket Hindi HD1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3fHCTs_9KC6E_nHNzHIHb9ZnsRSrBU1Sg1tOIYIfXmJqqVrHL5OGbgIw&s=10" group-title="Sports", cricket Hindi HD1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=81872faa1d6b45fa9045cdeb2e310000:9b88168e61274587a471962c46b94675
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
