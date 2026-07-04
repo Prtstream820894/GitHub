@@ -16,7 +16,7 @@ https://yowaimo.in/TUTASKY/HeheGandu/manifest.mpd?id=235|User-Agent=Mozilla/5.0 
 
 
 
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3fHCTs_9KC6E_nHNzHIHb9ZnsRSrBU1Sg1tOIYIfXmJqqVrHL5OGbgIw&s=10" group-title="Sports", cricket Hindi HD1
+#EXTINF:-1 tvg-logo="https://pbs.twimg.com/media/HMQCE-hbgAANMow.jpg" group-title="Sports", Final W-Wc(2026)
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=81872faa1d6b45fa9045cdeb2e310000:9b88168e61274587a471962c46b94675
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
