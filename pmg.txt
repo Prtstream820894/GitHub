@@ -8,10 +8,10 @@ https://dishmt.slivcdn.com/hls/live/2020591-b/TEN3HD/master.m3u8?hdnea=exp=17829
 
 
 
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3fHCTs_9KC6E_nHNzHIHb9ZnsRSrBU1Sg1tOIYIfXmJqqVrHL5OGbgIw&s=10" group-title="Sports", Women t-20 WC
-#EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
-#EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
-https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8
+#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,h_1000,w_1200/sources/r1/cms/prod/3780/1747817863780-a" group-title="Sports", MLC 
+#EXTVLCOPT:license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=vF6pUmmFU9qrqFeHAB1gkw:UofZ-COiRv2w7P7jjwCpKg
+https://yowaimo.in/TUTASKY/HeheGandu/manifest.mpd?id=235|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36&Origin=https://watch.tataplay.com&Referer=https://watch.tataplay.com/
 
 
 
