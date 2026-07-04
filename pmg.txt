@@ -2,7 +2,7 @@ EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 #Generated on 1768353430
 
 #EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,t_web_m_2x/sources/r1/cms/prod/6725/1782885566725-h" group-title="Sports", Ind vs Eng T-20
-https://dishmt.slivcdn.com/hls/live/2020591-b/TEN3HD/master.m3u8?hdnea=exp=1782961300~acl=/*~id=1e03fe217581440690708a23c8a3a3ff-2008311105131851914~hmac=e662d999be523b1cc257b2f14af3813331a54554cfcafb25a44adacd3ee6cb21|Origin=https://www.sonyliv.com&Referer=https://www.sonyliv.com/&x-playback-session-id=1e03fe217581440690708a23c8a3a3ff-1782917788547
+https://cloudplay-sonyliv.pages.dev/ten3hd.m3u8
 
 
 
