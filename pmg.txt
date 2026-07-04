@@ -52,7 +52,7 @@ https://livetv.hotstar.com/mp1/gec-india-1540065782/fce958099ca84fc3b980e651a4a6
 #EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
 https://livetv.hotstar.com/mp1/gec-india-1540065788/fa6a4f0005ef4f90ab24484d165b0aaf/index.mpd
 
-#EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,t_web_m_2x/sources/r1/cms/prod/9793/1783099869793-h" group-title="Sports", Ind vs Eng T-20
+#EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,t_web_m_2x/sources/r1/cms/prod/9793/1783099869793-h" group-title="Sports", Ind vs Eng
 https://cloudplay-sonyliv.pages.dev/ten3hd.m3u8
 
 
