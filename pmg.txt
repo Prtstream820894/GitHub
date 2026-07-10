@@ -31,7 +31,8 @@ https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/w0rehjjrwe/out/v1
 #EXTINF:-1 group-title="Movies" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-19212-jd2xwa4w-v1/imageContent-19212-jd2xwa4w-m1.png",Star gold (hd)
 https://delta45tatasky.akamaized.net/out/i/1633.mpd|drmScheme=clearkey&drmLicense=6f715e0e16cf4b20bc94f6f85023974b:516785ded0aee1dafae22e2874528b2a
 
-
+#EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,t_web_m_2x/sources/r1/cms/prod/9793/1783099869793-h" group-title="Sports", Ind vs Eng
+https://cloudplay-sonyliv.pages.dev/ten3hd.m3u8
 
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7430/567430-h" group-title="Sports",Star Sports HD1
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -55,8 +56,7 @@ https://livetv.hotstar.com/mp1/gec-india-1540065788/fa6a4f0005ef4f90ab24484d165b
 #EXTHTTP:{"Cookie":"hdntl=exp=1776162080~acl=%2f*~id=d180c5a43b4cb29d32d70374bb44a76e~data=hdntl~hmac=e03bce892f4e9c2a81a7cb8ac40a778f13f67801b44cc5f23a1ba7ebe9529fee","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
 https://jcevents.hotstar.com/bpk-tv/f0e3e64ae415771d8e460317ce97aa5e/Fallback/f0e3e64ae415771d8e460317ce97aa5e.m3u8
 
-#EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,t_web_m_2x/sources/r1/cms/prod/9793/1783099869793-h" group-title="Sports", Ind vs Eng
-https://cloudplay-sonyliv.pages.dev/ten3hd.m3u8
+
 
 
 
