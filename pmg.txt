@@ -4,9 +4,27 @@ EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 #EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,t_web_m_2x/sources/r1/cms/prod/3127/1783778533127-h" group-title="Sports", Ind vs Eng T-20
 https://cloudplay-sonyliv.pages.dev/maxhd.m3u8
 
+#EXTINF:-1 tvg-id="0-1-6z5974943" tvg-logo="https://akamaividz2.zee5.com/image/upload/w_1013,h_570,c_scale,f_webp,q_auto:eco/resources/0-1-6z5974943/list/1920x1080listc978e9e99c0a48518209462aeba30ea847a136009096468d84bf72c2dedf09b5" group-title="FIFA 2026", UNITE8 HINDI
+https://stream.mux.com/yUS01rSBulkhnrBR8mXlqqLgLSvZHTuPw.m3u8?token=eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ5VVMwMXJTQnVsa2huckJSOG1YbHFxTGdMU3ZaSFR1UHciLCJleHAiOjE3ODM4ODg0MTYsImtpZCI6ImJsQkFLOGRIQ2ZpMjNxdmxiVnJDUWlvWmJzcmtWczZQIiwiYXVkIjoidiJ9.ekXPqbbm-sTFWHzhcYy9EfTveyPz-iuphbeOztTpiZjyUOPzdQW0IoRMrQ_wDuqyK4P5t593S5pZAZmdVYCJSa79-7iUCmcPebADOkoPjB80ovTmniq1w53ickZkaxarxJeooE4PutAq8kHM7280UvvuIXMaG8e1isqcxxAKSOS7nrU-TjdVNrW2KvhxSyvkobnHUHbnhKso-Kx571FbRT_9mdvZDpTkjAi21sIEI2S70wDDgr6V3u8sWHOg2YahsN6kH4oYCMaHhyIgBOhnp3GM9Dvg7o1VR5WB1a-E7YfQTYepgCV7cViTobEUk1kv6TewiGxk3FWMt-yWE_4d8A
+
+#EXTINF:-1 tvg-id="0-1-6z5974943" tvg-logo="https://akamaividz2.zee5.com/image/upload/w_1013,h_570,c_scale,f_webp,q_auto:eco/resources/0-1-6z5974943/list/1920x1080listc978e9e99c0a48518209462aeba30ea847a136009096468d84bf72c2dedf09b5" group-title="FIFA 2026", FOX SPORTS HD
+#KODIPROP:inputstream=inputstream.adaptive
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=0cc2f872759c96de70237e6fa6de03d0:a879b1d38ed002d4018bce96f9219b8d
+https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/zpfs5hlgya/out/v1/84b1d591a23640178a8e8aa43c6e59a7/cenc.mpd|user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36
 
 #EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="Sports", Fifa wc 2026
-https://stream.mux.com/yUS01rSBulkhnrBR8mXlqqLgLSvZHTuPw.m3u8?token=eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ5VVMwMXJTQnVsa2huckJSOG1YbHFxTGdMU3ZaSFR1UHciLCJleHAiOjE3ODM4ODg0MTYsImtpZCI6ImJsQkFLOGRIQ2ZpMjNxdmxiVnJDUWlvWmJzcmtWczZQIiwiYXVkIjoidiJ9.ekXPqbbm-sTFWHzhcYy9EfTveyPz-iuphbeOztTpiZjyUOPzdQW0IoRMrQ_wDuqyK4P5t593S5pZAZmdVYCJSa79-7iUCmcPebADOkoPjB80ovTmniq1w53ickZkaxarxJeooE4PutAq8kHM7280UvvuIXMaG8e1isqcxxAKSOS7nrU-TjdVNrW2KvhxSyvkobnHUHbnhKso-Kx571FbRT_9mdvZDpTkjAi21sIEI2S70wDDgr6V3u8sWHOg2YahsN6kH4oYCMaHhyIgBOhnp3GM9Dvg7o1VR5WB1a-E7YfQTYepgCV7cViTobEUk1kv6TewiGxk3FWMt-yWE_4d8A
+http://103.163.117.83:8063/ch1/tracks-v1/index.m3u8
+
+#EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="Sports", Fifa wc 2026
+http://103.165.93.31:8095/tsports/tracks-v1a1/mono.m3u8
+
+#EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="Sports", Fifa wc 2026
+http://103.165.93.31:8095/tsports/video.m3u8
+
+#EXTINF:-1 tvg-id="12" tvg-chno="53" tvg-name="nepal-tv" tvg-country="NP" tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="Sports", Fifa wc 2026
+http://103.165.93.31:8095/somoyTv/tracks-v1a1/mono.m3u8
 
 #EXTINF:-1 tvg-logo="https://i.postimg.cc/0NYVSnkr/Gemini-Generated-Image-ykkw2cykkw2cykkw.png" group-title="Sports",Fifa wc 2026
 #KODIPROP:inputstream=inputstream.adaptive
