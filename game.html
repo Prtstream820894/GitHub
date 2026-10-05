@@ -21,13 +21,12 @@ html,body{ margin:0; width:100%; height:100%; overflow:hidden; background:#05081
 /* ================= GAME ================= */ 
 #game{ position:absolute; top:134px; left:8px; right:8px; bottom:2px; border:1px solid #2c3650; border-radius:20px; overflow:hidden; background: radial-gradient(circle at 20% 10%,rgba(255,255,255,.07),transparent 25%), radial-gradient(circle at 85% 30%,rgba(70,110,255,.08),transparent 30%), linear-gradient(#101a33,#060a13); touch-action:none; } 
 #canvas{ position:absolute; inset:0; width:100%; height:100%; touch-action:none; } 
-/* ================= OVERLAYS ================= */ 
-#start-overlay{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(2,4,9,.90); backdrop-filter:blur(7px); z-index:25; } 
+/* ================= GAME OVER ================= */ 
 #overlay{ position:absolute; inset:0; display:none; align-items:center; justify-content:center; background:rgba(2,4,9,.84); backdrop-filter:blur(7px); z-index:20; } 
 .panel{ width:min(88%,350px); padding:28px 22px; text-align:center; background:#111827; border:1px solid #36415a; border-radius:20px; box-shadow:0 20px 60px rgba(0,0,0,.45); } 
 .panel h1{ margin:0 0 8px; font-size:30px; } 
 .panel p{ margin:8px 0 22px; color:#9ba5b8; } 
-#start-btn, #restart{ width:100%; height:48px; border:0; border-radius:12px; background:#ff3158; color:#fff; font-size:16px; font-weight:800; cursor:pointer; } 
+#restart{ width:100%; height:48px; border:0; border-radius:12px; background:#ff3158; color:#fff; font-size:16px; font-weight:800; cursor:pointer; } 
 /* ================= MOBILE ================= */ 
 @media(max-width:600px){ 
 #header{ top:80px; } 
@@ -57,14 +56,6 @@ html,body{ margin:0; width:100%; height:100%; overflow:hidden; background:#05081
 <!-- ================= GAME ================= --> 
 <div id="game"> 
 <canvas id="canvas"></canvas> 
-<!-- START SCREEN --> 
-<div id="start-overlay"> 
-<div class="panel"> 
-<h1>BUBBLE SHOOTER</h1> 
-<p>Tap below to start playing!</p> 
-<button id="start-btn"> START GAME </button> 
-</div> 
-</div> 
 <!-- GAME OVER --> 
 <div id="overlay"> 
 <div class="panel"> 
@@ -85,8 +76,6 @@ const scoreEl = document.getElementById("score");
 const levelEl = document.getElementById("level"); 
 const shotsEl = document.getElementById("shots"); 
 const overlay = document.getElementById("overlay"); 
-const startOverlay = document.getElementById("start-overlay"); 
-const startBtn = document.getElementById("start-btn"); 
 const result = document.getElementById("result"); 
 const restart = document.getElementById("restart"); 
 
@@ -162,8 +151,7 @@ let W = 0;
 let H = 0; 
 let R = 18; 
 let ROW_H = 31; 
-let gameStarted = false; 
-let running = false; 
+let running = true; 
 let shooting = false; 
 let pointerDown = false; 
 let aimAngle = 0; 
@@ -673,26 +661,6 @@ function endGame(){
   render(); 
 } 
 
-startBtn.addEventListener( "click", function(e){ 
-  e.stopPropagation(); 
-  initAudio(); 
-  startOverlay.style.display = "none"; 
-  score = 0; 
-  shots = 0; 
-  level = 1; 
-  running = true; 
-  shooting = false; 
-  pointerDown = false; 
-  shot = null; 
-  scoreEl.textContent = "0"; 
-  shotsEl.textContent = "0"; 
-  levelEl.textContent = "1"; 
-  newGame(); 
-  aimAngle = 0; 
-  targetAngle = 0; 
-  render(); 
-}); 
-
 restart.addEventListener( "click", function(e){ 
   e.stopPropagation(); 
   score = 0; 
@@ -708,6 +676,12 @@ restart.addEventListener( "click", function(e){
   overlay.style.display = "none"; 
   newGame(); 
 }); 
+
+newGame(); 
+aimAngle = 0; 
+targetAngle = 0;
+render(); 
 </script> 
 </body> 
 </html>
+Isme BTN ads kar start game tabhi start honga
