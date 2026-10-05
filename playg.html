@@ -1,0 +1,295 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"> 
+<title>PRT Bubble Shooter</title> 
+<style> 
+*{ box-sizing:border-box; -webkit-tap-highlight-color:transparent; } 
+html,body{ margin:0; width:100%; height:100%; overflow:hidden; background:#050811; color:white; font-family:Arial,sans-serif; } 
+#app{ width:100%; height:100%; max-width:1100px; margin:auto; position:relative; background: radial-gradient(circle at 50% 0%,#23345b,#101628 35%,#050811 80%); } 
+
+/* ================= HEADER ================= */ 
+#header{ position:absolute; top:12px; left:12px; right:12px; height:50px; display:flex; align-items:center; justify-content:space-between; z-index:5; } 
+.logo{ font-size:19px; font-weight:900; display: flex; align-items: center; gap: 10px; } 
+.logo span{ color:#ff3158; } 
+.menu-btn{ background: #1f293d; border: 1px solid #303a51; color: white; padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: bold; }
+.stats{ display:flex; gap:6px; } 
+.stat{ min-width:58px; padding:5px 7px; text-align:center; background:rgba(15,21,36,.95); border:1px solid #303a51; border-radius:10px; } 
+.stat b{ display:block; font-size:14px; } 
+.stat small{ display:block; margin-top:2px; color:#7f899d; font-size:8px; } 
+
+/* ================= MENU MODAL ================= */
+#menu-modal{ position:absolute; inset:0; display:none; align-items:center; justify-content:center; background:rgba(2,4,9,.85); backdrop-filter:blur(7px); z-index:30; }
+.menu-panel{ width:min(90%,360px); padding:24px; background:#111827; border:1px solid #36415a; border-radius:20px; box-shadow:0 20px 60px rgba(0,0,0,.45); text-align:center; max-height: 85vh; overflow-y: auto; }
+.menu-panel h2{ margin-top:0; color:#ff3158; font-size:22px; }
+.menu-panel input{ width:100%; padding:12px; margin:12px 0; background:#0b0f19; border:1px solid #2c3650; color:white; border-radius:10px; font-size:15px; outline:none; text-align:center; }
+.menu-panel button{ width:100%; padding:12px; border:0; border-radius:10px; background:#ff3158; color:white; font-weight:bold; font-size:15px; cursor:pointer; margin-top:5px; }
+.close-menu{ background:#263047 !important; margin-top:10px !important; }
+#payout-status{ margin-top:12px; font-size:13px; font-weight:bold; }
+
+/* Admin panel styles */
+.admin-item{ background:#0b0f19; border:1px solid #2c3650; padding:10px; margin:8px 0; border-radius:8px; font-size:12px; text-align:left; display:flex; justify-content:space-between; align-items:center; }
+.admin-item button{ width:auto; padding:5px 10px; font-size:11px; margin:0; background:#0aa94d; }
+
+/* ================= GAME ================= */ 
+#game{ position:absolute; top:74px; left:8px; right:8px; bottom:2px; border:1px solid #2c3650; border-radius:20px; overflow:hidden; background: radial-gradient(circle at 20% 10%,rgba(255,255,255,.07),transparent 25%), radial-gradient(circle at 85% 30%,rgba(70,110,255,.08),transparent 30%), linear-gradient(#101a33,#060a13); touch-action:none; } 
+#canvas{ position:absolute; inset:0; width:100%; height:100%; touch-action:none; } 
+
+/* ================= GAME OVER ================= */ 
+#overlay{ position:absolute; inset:0; display:none; align-items:center; justify-content:center; background:rgba(2,4,9,.84); backdrop-filter:blur(7px); z-index:20; } 
+.panel{ width:min(88%,350px); padding:28px 22px; text-align:center; background:#111827; border:1px solid #36415a; border-radius:20px; box-shadow:0 20px 60px rgba(0,0,0,.45); } 
+.panel h1{ margin:0 0 8px; font-size:30px; } 
+.panel p{ margin:8px 0 22px; color:#9ba5b8; } 
+#restart{ width:100%; height:48px; border:0; border-radius:12px; background:#ff3158; color:#fff; font-size:16px; font-weight:800; cursor:pointer; } 
+
+@media(max-width:600px){ 
+#header{ top:8px; } 
+.logo{ font-size:14px; } 
+.stat{ min-width:50px; padding:4px; } 
+.stat b{ font-size:11px; } 
+#game{ top:66px; } 
+} 
+</style> 
+</head> 
+<body> 
+<div id="app"> 
+
+<!-- ================= HEADER ================= --> 
+<div id="header"> 
+<div class="logo"> 
+  <span>PRT</span> BUBBLE SHOOTER 
+  <button class="menu-btn" id="open-menu">Menu</button>
+</div> 
+<div class="stats"> 
+<div class="stat"> <b id="score">0</b> <small>SCORE</small> </div> 
+<div class="stat"> <b id="level">1</b> <small>LEVEL</small> </div> 
+<div class="stat"> <b id="shots">0</b> <small>SHOTS</small> </div> 
+</div> 
+</div> 
+
+<!-- ================= MENU MODAL ================= -->
+<div id="menu-modal">
+  <div class="menu-panel" id="modal-content-box">
+    <h2>Paytm Cash Redeem</h2>
+    <p style="font-size:12px; color:#9ba5b8;">Score 100,000 to redeem ₹50 Paytm Cash!</p>
+    <div id="redeem-section">
+      <input type="tel" id="paytm-number" placeholder="Enter Paytm Number" maxlength="10">
+      <button id="submit-payout">Redeem ₹50</button>
+    </div>
+    <div id="payout-status">Status: Not Requested</div>
+    <button class="close-menu" id="close-menu">Close Menu</button>
+  </div>
+</div>
+
+<!-- ================= GAME ================= --> 
+<div id="game"> 
+<canvas id="canvas"></canvas> 
+<div id="overlay"> 
+<div class="panel"> 
+<h1>GAME OVER</h1> 
+<p id="result"> Score: 0 </p> 
+<button id="restart"> PLAY AGAIN </button> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+<script> 
+"use strict"; 
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzLo6p_I4B-iAFdX7caw6vabxx0wHdWFSe_xjitCUyAGFqsP7U9FJtUy4vvoDLkAx7I/exec";
+
+const game = document.getElementById("game"); 
+const canvas = document.getElementById("canvas"); 
+const ctx = canvas.getContext("2d"); 
+const scoreEl = document.getElementById("score"); 
+const levelEl = document.getElementById("level"); 
+const shotsEl = document.getElementById("shots"); 
+const overlay = document.getElementById("overlay"); 
+const result = document.getElementById("result"); 
+const restart = document.getElementById("restart"); 
+
+const openMenuBtn = document.getElementById("open-menu");
+const closeMenuBtn = document.getElementById("close-menu");
+const menuModal = document.getElementById("menu-modal");
+const submitPayoutBtn = document.getElementById("submit-payout");
+const paytmNumberInput = document.getElementById("paytm-number");
+const payoutStatusEl = document.getElementById("payout-status");
+
+openMenuBtn.addEventListener("click", () => { menuModal.style.display = "flex"; checkUserStatus(); });
+closeMenuBtn.addEventListener("click", () => { menuModal.style.display = "none"; });
+
+let score = parseInt(localStorage.getItem("prt_bubble_score")) || 0;
+let level = parseInt(localStorage.getItem("prt_bubble_level")) || 1;
+scoreEl.textContent = score;
+levelEl.textContent = level;
+
+function saveProgress() {
+  localStorage.setItem("prt_bubble_score", score);
+  localStorage.setItem("prt_bubble_level", level);
+}
+
+let audioCtx = null; 
+function initAudio(){ 
+  if(!audioCtx){ audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } 
+  else if(audioCtx.state === 'suspended'){ audioCtx.resume(); } 
+} 
+function playSound(type){ try { initAudio(); } catch(e){} } 
+
+const COLORS = { red:{ main:"#ef1747", light:"#ff7188" }, blue:{ main:"#087df0", light:"#71ddff" }, green:{ main:"#0aa94d", light:"#72f19b" }, yellow:{ main:"#ffae00", light:"#fff17a" }, purple:{ main:"#7028dc", light:"#df91ff" } }; 
+const COLOR_NAMES = [ "red", "blue", "green", "yellow", "purple" ]; 
+const COLS = 10, MAX_ROWS = 30; 
+let grid = [], W = 0, H = 0, R = 18, ROW_H = 31; 
+let running = true, shooting = false, pointerDown = false; 
+let aimAngle = 0, targetAngle = 0, shot = null, shots = 0, misses = 0; 
+let currentColor = "red", nextColor = "blue", lastTime = 0, gameRect = null; 
+
+function resize(){ 
+  gameRect = game.getBoundingClientRect(); 
+  W = gameRect.width; H = gameRect.height; 
+  const dpr = Math.min( window.devicePixelRatio || 1, 2 ); 
+  canvas.width = Math.floor(W*dpr); canvas.height = Math.floor(H*dpr); 
+  canvas.style.width = W+"px"; canvas.style.height = H+"px"; 
+  ctx.setTransform( dpr, 0, 0, dpr, 0, 0 ); 
+  R = Math.min( 21, Math.max( 15, (W-20)/ (COLS*2+1) ) ); 
+  ROW_H = R*1.73; 
+} 
+window.addEventListener( "resize", resize ); 
+resize(); 
+
+function randomColor(){ return COLOR_NAMES[ Math.floor( Math.random()* COLOR_NAMES.length ) ]; } 
+function newGame(){ 
+  grid = Array.from( {length:MAX_ROWS}, ()=>Array(COLS).fill(null) ); 
+  const startingRows = Math.min( 5+ Math.floor( (level-1)/2 ), 8 ); 
+  for( let r=0; r<startingRows; r++ ){ for( let c=0; c<COLS; c++ ){ grid[r][c] = randomColor(); } } 
+  currentColor = randomColor(); nextColor = randomColor(); 
+  misses = 0; shooting = false; shot = null; render(); 
+} 
+function cellPos(r,c){ const offset = (r%2) ? R : 0; return { x: R+ c*R*2+ offset, y: R+ r*ROW_H+ 6 }; } 
+function drawBubble( x, y, radius, color, alpha=1 ){ 
+  const data = COLORS[color]; 
+  ctx.save(); ctx.globalAlpha = alpha; ctx.shadowColor = "rgba(0,0,0,.45)"; ctx.shadowBlur = 8; ctx.shadowOffsetY = 4; 
+  const gradient = ctx.createRadialGradient( x-radius*.35, y-radius*.42, radius*.08, x, y, radius ); 
+  gradient.addColorStop( 0, data.light ); gradient.addColorStop( .45, data.main ); gradient.addColorStop( 1, "#080b13" ); 
+  ctx.fillStyle = gradient; ctx.beginPath(); ctx.arc( x, y, radius, 0, Math.PI*2 ); ctx.fill(); 
+  ctx.restore(); 
+} 
+function render(){ 
+  ctx.clearRect( 0, 0, W, H ); 
+  for( let r=0; r<MAX_ROWS; r++ ){ for( let c=0; c<COLS; c++ ){ if( grid[r][c] ){ const p = cellPos(r,c); drawBubble( p.x, p.y, R-.7, grid[r][c] ); } } } 
+  aimAngle += (targetAngle - aimAngle) * 0.2; 
+  if(shot){ drawBubble( shot.x, shot.y, R-.5, shot.color ); }
+  if(running && !shooting && Math.abs(targetAngle - aimAngle) > 0.01) { requestAnimationFrame(render); }
+} 
+function updatePointer( clientX, clientY ){ 
+  if(!gameRect) gameRect = game.getBoundingClientRect(); 
+  const x = clientX - gameRect.left, y = clientY - gameRect.top; 
+  let dx = x - (W/2), dy = y - (H - 8); 
+  if( dy > -5 ) dy = -5; 
+  targetAngle = Math.max( -68, Math.min( 68, Math.atan2( dx, -dy ) * ( 180 / Math.PI ) ) ); 
+  render(); 
+} 
+game.addEventListener( "pointerdown", function(e){ if( !running || shooting ) return; pointerDown = true; updatePointer( e.clientX, e.clientY ); }); 
+game.addEventListener( "pointermove", function(e){ if( !pointerDown || !running ) return; updatePointer( e.clientX, e.clientY ); }); 
+game.addEventListener( "pointerup", function(){ pointerDown = false; }); 
+
+// Submit Payout Handler
+submitPayoutBtn.addEventListener("click", () => {
+  const phone = paytmNumberInput.value.trim();
+  if(phone.length !== 10){ alert("Please enter a valid 10-digit mobile number!"); return; }
+  if(score < 10){ alert("You need at least 10 score to redeem ₹50!"); return; }
+  
+
+  submitPayoutBtn.disabled = true; submitPayoutBtn.textContent = "Submitting...";
+
+  fetch(SCRIPT_URL, {
+    method: "POST",
+    body: JSON.stringify({ action: "redeem", phone: phone, score: score })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if(data.status === "success"){
+      localStorage.setItem("user_paytm_phone", phone);
+      payoutStatusEl.textContent = "Status: Processing ⏳";
+      payoutStatusEl.style.color = "#ffae00";
+      alert("Redeem request submitted successfully!");
+    } else {
+      alert("Error: " + data.message);
+    }
+    submitPayoutBtn.disabled = false; submitPayoutBtn.textContent = "Redeem ₹50";
+  }).catch(() => {
+    alert("Network error.");
+    submitPayoutBtn.disabled = false; submitPayoutBtn.textContent = "Redeem ₹50";
+  });
+});
+
+function checkUserStatus(){
+  const savedPhone = localStorage.getItem("user_paytm_phone");
+  if(!savedPhone){
+    payoutStatusEl.textContent = "Status: Not Requested";
+    payoutStatusEl.style.color = "white";
+    return;
+  }
+  fetch(`${SCRIPT_URL}?phone=${savedPhone}`)
+  .then(res => res.json())
+  .then(data => {
+    if(data.status === "processing"){
+      payoutStatusEl.textContent = "Status: Processing ⏳";
+      payoutStatusEl.style.color = "#ffae00";
+    } else if(data.status === "success"){
+      payoutStatusEl.textContent = "Status: Success! Paid ✅";
+      payoutStatusEl.style.color = "#0aa94d";
+    }
+  }).catch(e=>{});
+}
+
+// ================= ADMIN PANEL SECRET =================
+// Game screen par 5 baar fast tap karke password "7247" dalne par aapka Admin Panel khul jayega 
+let secretClicks = 0;
+game.addEventListener("click", () => {
+  secretClicks++;
+  if(secretClicks >= 5){
+    const pass = prompt("Enter Admin Passcode:");
+    if(pass === "7247"){
+      openAdminPanel();
+    }
+    secretClicks = 0;
+  }
+  setTimeout(() => { secretClicks = 0; }, 2000);
+});
+
+function openAdminPanel(){
+  menuModal.style.display = "flex";
+  const box = document.getElementById("modal-content-box");
+  box.innerHTML = `<h2>Admin Panel</h2><p style="font-size:12px;">Loading requests...</p><button class="close-menu" onclick="location.reload()">Close Panel</button>`;
+
+  fetch(`${SCRIPT_URL}?all=true`)
+  .then(res => res.json())
+  .then(users => {
+    let html = `<h2>Admin Panel</h2><button class="close-menu" onclick="location.reload()" style="margin-bottom:10px;">Close Panel</button>`;
+    if(users.length === 0){ html += `<p>No requests found.</p>`; }
+    users.forEach(u => {
+      html += `<div class="admin-item">
+        <div><b>${u.phone}</b><br><small>Score: ${u.score} | ${u.status}</small></div>
+        ${u.status !== 'success' ? `<button onclick="markSuccess('${u.phone}')">Pay & Success</button>` : `<span style="color:#0aa94d; font-weight:bold;">Paid</span>`}
+      </div>`;
+    });
+    box.innerHTML = html;
+  });
+}
+
+window.markSuccess = function(phone){
+  fetch(SCRIPT_URL, {
+    method: "POST",
+    body: JSON.stringify({ action: "updateStatus", phone: phone, newStatus: "Success" })
+  }).then(res => res.json()).then(data => {
+    alert("Updated successfully!");
+    openAdminPanel();
+  });
+};
+
+newGame(); 
+aimAngle = 0; targetAngle = 0; render(); 
+</script> 
+</body> 
+</html>
