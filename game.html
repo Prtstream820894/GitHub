@@ -9,8 +9,7 @@
 html,body{ margin:0; width:100%; height:100%; overflow:hidden; background:#050811; color:white; font-family:Arial,sans-serif; } 
 #app{ width:100%; height:100%; max-width:1100px; margin:auto; position:relative; background: radial-gradient(circle at 50% 0%,#23345b,#101628 35%,#050811 80%); } 
 /* ================= AD ================= */ 
-#ad{ position:absolute; top:0; left:0; right:0; height:72px; display:flex; align-items:center; justify-content:center; background:#101522; border-bottom:1px solid #293146; color:#70798d; font-size:12px; z-index:10; overflow:hidden; pointer-events:none; } 
-#ad iframe, #ad script, #ad div { pointer-events:auto; }
+#ad{ position:absolute; top:0; left:0; right:0; height:72px; display:flex; align-items:center; justify-content:center; background:#101522; border-bottom:1px solid #293146; color:#70798d; font-size:12px; z-index:10; overflow:hidden; } 
 /* ================= HEADER ================= */ 
 #header{ position:absolute; top:82px; left:12px; right:12px; height:50px; display:flex; align-items:center; justify-content:space-between; z-index:5; } 
 .logo{ font-size:19px; font-weight:900; } 
@@ -22,12 +21,13 @@ html,body{ margin:0; width:100%; height:100%; overflow:hidden; background:#05081
 /* ================= GAME ================= */ 
 #game{ position:absolute; top:134px; left:8px; right:8px; bottom:2px; border:1px solid #2c3650; border-radius:20px; overflow:hidden; background: radial-gradient(circle at 20% 10%,rgba(255,255,255,.07),transparent 25%), radial-gradient(circle at 85% 30%,rgba(70,110,255,.08),transparent 30%), linear-gradient(#101a33,#060a13); touch-action:none; } 
 #canvas{ position:absolute; inset:0; width:100%; height:100%; touch-action:none; } 
-/* ================= GAME OVER ================= */ 
+/* ================= OVERLAYS ================= */ 
+#start-overlay{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(2,4,9,.90); backdrop-filter:blur(7px); z-index:25; } 
 #overlay{ position:absolute; inset:0; display:none; align-items:center; justify-content:center; background:rgba(2,4,9,.84); backdrop-filter:blur(7px); z-index:20; } 
 .panel{ width:min(88%,350px); padding:28px 22px; text-align:center; background:#111827; border:1px solid #36415a; border-radius:20px; box-shadow:0 20px 60px rgba(0,0,0,.45); } 
 .panel h1{ margin:0 0 8px; font-size:30px; } 
 .panel p{ margin:8px 0 22px; color:#9ba5b8; } 
-#restart{ width:100%; height:48px; border:0; border-radius:12px; background:#ff3158; color:#fff; font-size:16px; font-weight:800; cursor:pointer; } 
+#start-btn, #restart{ width:100%; height:48px; border:0; border-radius:12px; background:#ff3158; color:#fff; font-size:16px; font-weight:800; cursor:pointer; } 
 /* ================= MOBILE ================= */ 
 @media(max-width:600px){ 
 #header{ top:80px; } 
@@ -42,8 +42,8 @@ html,body{ margin:0; width:100%; height:100%; overflow:hidden; background:#05081
 <div id="app"> 
 <!-- ================= AD ================= --> 
 <div id="ad"> 
-<script src="https://pl31648697.profitableratecpmnetwork.com/10/23/13/1023136af39c5d41f0a03fc1556362b9.js"></script> 
-<script src="https://pl31648699.profitableratecpmnetwork.com/0c/ea/1c/0cea1ccd8d669bb542cb40c3555c1949.js"></script> 
+<script async src="https://pl31648697.profitableratecpmnetwork.com/10/23/13/1023136af39c5d41f0a03fc1556362b9.js"></script> 
+<script async src="https://pl31648699.profitableratecpmnetwork.com/0c/ea/1c/0cea1ccd8d669bb542cb40c3555c1949.js"></script> 
 </div> 
 <!-- ================= HEADER ================= --> 
 <div id="header"> 
@@ -57,6 +57,14 @@ html,body{ margin:0; width:100%; height:100%; overflow:hidden; background:#05081
 <!-- ================= GAME ================= --> 
 <div id="game"> 
 <canvas id="canvas"></canvas> 
+<!-- START SCREEN --> 
+<div id="start-overlay"> 
+<div class="panel"> 
+<h1>BUBBLE SHOOTER</h1> 
+<p>Tap below to start playing!</p> 
+<button id="start-btn"> START GAME </button> 
+</div> 
+</div> 
 <!-- GAME OVER --> 
 <div id="overlay"> 
 <div class="panel"> 
@@ -77,6 +85,8 @@ const scoreEl = document.getElementById("score");
 const levelEl = document.getElementById("level"); 
 const shotsEl = document.getElementById("shots"); 
 const overlay = document.getElementById("overlay"); 
+const startOverlay = document.getElementById("start-overlay"); 
+const startBtn = document.getElementById("start-btn"); 
 const result = document.getElementById("result"); 
 const restart = document.getElementById("restart"); 
 
@@ -152,7 +162,8 @@ let W = 0;
 let H = 0; 
 let R = 18; 
 let ROW_H = 31; 
-let running = true; 
+let gameStarted = false; 
+let running = false; 
 let shooting = false; 
 let pointerDown = false; 
 let aimAngle = 0; 
@@ -179,9 +190,9 @@ function resize(){
   ctx.setTransform( dpr, 0, 0, dpr, 0, 0 ); 
   R = Math.min( 21, Math.max( 15, (W-20)/ (COLS*2+1) ) ); 
   ROW_H = R*1.73; 
-  render();
 } 
 window.addEventListener( "resize", resize ); 
+resize(); 
 
 function randomColor(){ 
   return COLOR_NAMES[ Math.floor( Math.random()* COLOR_NAMES.length ) ]; 
@@ -235,7 +246,6 @@ function drawBubble( x, y, radius, color, alpha=1 ){
 } 
 
 function render(){ 
-  if(!W || !H) return;
   ctx.clearRect( 0, 0, W, H ); 
   ctx.fillStyle = "rgba(255,255,255,.13)"; 
   for( let i=0; i<25; i++ ){ 
@@ -269,6 +279,10 @@ function render(){
 
   if(shot){ 
     drawBubble( shot.x, shot.y, R-.5, shot.color ); 
+  }
+  
+  if(running && !shooting && Math.abs(targetAngle - aimAngle) > 0.01) {
+    requestAnimationFrame(render);
   }
 } 
 
@@ -659,6 +673,26 @@ function endGame(){
   render(); 
 } 
 
+startBtn.addEventListener( "click", function(e){ 
+  e.stopPropagation(); 
+  initAudio(); 
+  startOverlay.style.display = "none"; 
+  score = 0; 
+  shots = 0; 
+  level = 1; 
+  running = true; 
+  shooting = false; 
+  pointerDown = false; 
+  shot = null; 
+  scoreEl.textContent = "0"; 
+  shotsEl.textContent = "0"; 
+  levelEl.textContent = "1"; 
+  newGame(); 
+  aimAngle = 0; 
+  targetAngle = 0; 
+  render(); 
+}); 
+
 restart.addEventListener( "click", function(e){ 
   e.stopPropagation(); 
   score = 0; 
@@ -674,12 +708,6 @@ restart.addEventListener( "click", function(e){
   overlay.style.display = "none"; 
   newGame(); 
 }); 
-
-resize();
-newGame(); 
-aimAngle = 0; 
-targetAngle = 0;
-render();
 </script> 
 </body> 
 </html>
