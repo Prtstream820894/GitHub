@@ -9,11 +9,15 @@
 html,body{ margin:0; width:100%; height:100%; overflow:hidden; background:#050811; color:white; font-family:Arial,sans-serif; } 
 #app{ width:100%; height:100%; max-width:1100px; margin:auto; position:relative; background: radial-gradient(circle at 50% 0%,#23345b,#101628 35%,#050811 80%); } 
 
+/* ================= AD ================= */ 
+#ad{ position:absolute; top:0; left:0; right:0; height:72px; display:flex; align-items:center; justify-content:center; background:#101522; border-bottom:1px solid #293146; color:#70798d; font-size:12px; z-index:10; overflow:hidden; } 
+
 /* ================= HEADER ================= */ 
-#header{ position:absolute; top:12px; left:12px; right:12px; height:50px; display:flex; align-items:center; justify-content:space-between; z-index:5; } 
-.logo{ font-size:19px; font-weight:900; display: flex; align-items: center; gap: 10px; } 
+#header{ position:absolute; top:82px; left:12px; right:12px; height:50px; display:flex; align-items:center; justify-content:space-between; z-index:5; } 
+.logo{ font-size:19px; font-weight:900; display:flex; align-items:center; gap:10px; } 
 .logo span{ color:#ff3158; } 
-.menu-btn{ background: #1f293d; border: 1px solid #303a51; color: white; padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: bold; }
+.menu-btn{ background: #1f293d; border: 1px solid #303a51; color: white; padding: 5px 10px; border-radius: 8px; cursor: pointer; font-size: 12px; font-weight: bold; }
+
 .stats{ display:flex; gap:6px; } 
 .stat{ min-width:58px; padding:5px 7px; text-align:center; background:rgba(15,21,36,.95); border:1px solid #303a51; border-radius:10px; } 
 .stat b{ display:block; font-size:14px; } 
@@ -28,12 +32,12 @@ html,body{ margin:0; width:100%; height:100%; overflow:hidden; background:#05081
 .close-menu{ background:#263047 !important; margin-top:10px !important; }
 #payout-status{ margin-top:12px; font-size:13px; font-weight:bold; }
 
-/* Admin panel styles */
+/* Admin panel item styles */
 .admin-item{ background:#0b0f19; border:1px solid #2c3650; padding:10px; margin:8px 0; border-radius:8px; font-size:12px; text-align:left; display:flex; justify-content:space-between; align-items:center; }
 .admin-item button{ width:auto; padding:5px 10px; font-size:11px; margin:0; background:#0aa94d; }
 
 /* ================= GAME ================= */ 
-#game{ position:absolute; top:74px; left:8px; right:8px; bottom:2px; border:1px solid #2c3650; border-radius:20px; overflow:hidden; background: radial-gradient(circle at 20% 10%,rgba(255,255,255,.07),transparent 25%), radial-gradient(circle at 85% 30%,rgba(70,110,255,.08),transparent 30%), linear-gradient(#101a33,#060a13); touch-action:none; } 
+#game{ position:absolute; top:134px; left:8px; right:8px; bottom:2px; border:1px solid #2c3650; border-radius:20px; overflow:hidden; background: radial-gradient(circle at 20% 10%,rgba(255,255,255,.07),transparent 25%), radial-gradient(circle at 85% 30%,rgba(70,110,255,.08),transparent 30%), linear-gradient(#101a33,#060a13); touch-action:none; } 
 #canvas{ position:absolute; inset:0; width:100%; height:100%; touch-action:none; } 
 
 /* ================= GAME OVER ================= */ 
@@ -43,17 +47,24 @@ html,body{ margin:0; width:100%; height:100%; overflow:hidden; background:#05081
 .panel p{ margin:8px 0 22px; color:#9ba5b8; } 
 #restart{ width:100%; height:48px; border:0; border-radius:12px; background:#ff3158; color:#fff; font-size:16px; font-weight:800; cursor:pointer; } 
 
+/* ================= MOBILE ================= */ 
 @media(max-width:600px){ 
-#header{ top:8px; } 
+#header{ top:80px; } 
 .logo{ font-size:14px; } 
-.stat{ min-width:50px; padding:4px; } 
-.stat b{ font-size:11px; } 
-#game{ top:66px; } 
+.stat{ min-width:52px; padding:5px; } 
+.stat b{ font-size:12px; } 
+#game{ top:132px; } 
 } 
 </style> 
 </head> 
 <body> 
 <div id="app"> 
+
+<!-- ================= AD ================= --> 
+<div id="ad"> 
+<script async src="https://pl31648697.profitableratecpmnetwork.com/10/23/13/1023136af39c5d41f0a03fc1556362b9.js"></script> 
+<script async src="https://pl31648699.profitableratecpmnetwork.com/0c/ea/1c/0cea1ccd8d669bb542cb40c3555c1949.js"></script> 
+</div> 
 
 <!-- ================= HEADER ================= --> 
 <div id="header"> 
@@ -93,6 +104,7 @@ html,body{ margin:0; width:100%; height:100%; overflow:hidden; background:#05081
 </div> 
 </div> 
 </div> 
+
 </div> 
 
 <script> 
@@ -119,37 +131,102 @@ const payoutStatusEl = document.getElementById("payout-status");
 openMenuBtn.addEventListener("click", () => { menuModal.style.display = "flex"; checkUserStatus(); });
 closeMenuBtn.addEventListener("click", () => { menuModal.style.display = "none"; });
 
-let score = parseInt(localStorage.getItem("prt_bubble_score")) || 0;
-let level = parseInt(localStorage.getItem("prt_bubble_level")) || 1;
-scoreEl.textContent = score;
-levelEl.textContent = level;
-
-function saveProgress() {
-  localStorage.setItem("prt_bubble_score", score);
-  localStorage.setItem("prt_bubble_level", level);
-}
-
+// ================= AUDIO SETUP ================= 
 let audioCtx = null; 
 function initAudio(){ 
-  if(!audioCtx){ audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } 
-  else if(audioCtx.state === 'suspended'){ audioCtx.resume(); } 
+  if(!audioCtx){ 
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)(); 
+  } else if(audioCtx.state === 'suspended'){ 
+    audioCtx.resume(); 
+  } 
 } 
-function playSound(type){ try { initAudio(); } catch(e){} } 
 
-const COLORS = { red:{ main:"#ef1747", light:"#ff7188" }, blue:{ main:"#087df0", light:"#71ddff" }, green:{ main:"#0aa94d", light:"#72f19b" }, yellow:{ main:"#ffae00", light:"#fff17a" }, purple:{ main:"#7028dc", light:"#df91ff" } }; 
+function playSound(type){ 
+  try { 
+    initAudio(); 
+    if(!audioCtx) return; 
+    const now = audioCtx.currentTime; 
+    const osc = audioCtx.createOscillator(); 
+    const gain = audioCtx.createGain(); 
+    osc.connect(gain); 
+    gain.connect(audioCtx.destination); 
+
+    if(type === 'shoot'){ 
+      osc.type = 'sine'; 
+      osc.frequency.setValueAtTime(300, now); 
+      osc.frequency.exponentialRampToValueAtTime(600, now + 0.15); 
+      gain.gain.setValueAtTime(0.3, now); 
+      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.15); 
+      osc.start(now); 
+      osc.stop(now + 0.15); 
+    } else if(type === 'pop'){ 
+      osc.type = 'triangle'; 
+      osc.frequency.setValueAtTime(450, now); 
+      osc.frequency.exponentialRampToValueAtTime(800, now + 0.1); 
+      gain.gain.setValueAtTime(0.4, now); 
+      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.1); 
+      osc.start(now); 
+      osc.stop(now + 0.1); 
+    } else if(type === 'bounce'){ 
+      osc.type = 'sine'; 
+      osc.frequency.setValueAtTime(220, now); 
+      osc.frequency.exponentialRampToValueAtTime(150, now + 0.08); 
+      gain.gain.setValueAtTime(0.2, now); 
+      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08); 
+      osc.start(now); 
+      osc.stop(now + 0.08); 
+    } else if(type === 'gameover'){ 
+      osc.type = 'sawtooth'; 
+      osc.frequency.setValueAtTime(250, now); 
+      osc.frequency.linearRampToValueAtTime(100, now + 0.4); 
+      gain.gain.setValueAtTime(0.3, now); 
+      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.4); 
+      osc.start(now); 
+      osc.stop(now + 0.4); 
+    } 
+  } catch(e){} 
+} 
+
+const COLORS = { 
+  red:{ main:"#ef1747", light:"#ff7188" }, 
+  blue:{ main:"#087df0", light:"#71ddff" }, 
+  green:{ main:"#0aa94d", light:"#72f19b" }, 
+  yellow:{ main:"#ffae00", light:"#fff17a" }, 
+  purple:{ main:"#7028dc", light:"#df91ff" } 
+}; 
 const COLOR_NAMES = [ "red", "blue", "green", "yellow", "purple" ]; 
-const COLS = 10, MAX_ROWS = 30; 
-let grid = [], W = 0, H = 0, R = 18, ROW_H = 31; 
-let running = true, shooting = false, pointerDown = false; 
-let aimAngle = 0, targetAngle = 0, shot = null, shots = 0, misses = 0; 
-let currentColor = "red", nextColor = "blue", lastTime = 0, gameRect = null; 
+
+const COLS = 10; 
+const MAX_ROWS = 30; 
+let grid = []; 
+let W = 0; 
+let H = 0; 
+let R = 18; 
+let ROW_H = 31; 
+let running = true; 
+let shooting = false; 
+let pointerDown = false; 
+let aimAngle = 0; 
+let targetAngle = 0; 
+let shot = null; 
+let score = 0; 
+let level = 1; 
+let shots = 0; 
+let misses = 0; 
+let currentColor = "red"; 
+let nextColor = "blue"; 
+let lastTime = 0; 
+let gameRect = null; 
 
 function resize(){ 
   gameRect = game.getBoundingClientRect(); 
-  W = gameRect.width; H = gameRect.height; 
+  W = gameRect.width; 
+  H = gameRect.height; 
   const dpr = Math.min( window.devicePixelRatio || 1, 2 ); 
-  canvas.width = Math.floor(W*dpr); canvas.height = Math.floor(H*dpr); 
-  canvas.style.width = W+"px"; canvas.style.height = H+"px"; 
+  canvas.width = Math.floor(W*dpr); 
+  canvas.height = Math.floor(H*dpr); 
+  canvas.style.width = W+"px"; 
+  canvas.style.height = H+"px"; 
   ctx.setTransform( dpr, 0, 0, dpr, 0, 0 ); 
   R = Math.min( 21, Math.max( 15, (W-20)/ (COLS*2+1) ) ); 
   ROW_H = R*1.73; 
@@ -157,48 +234,508 @@ function resize(){
 window.addEventListener( "resize", resize ); 
 resize(); 
 
-function randomColor(){ return COLOR_NAMES[ Math.floor( Math.random()* COLOR_NAMES.length ) ]; } 
+function randomColor(){ 
+  return COLOR_NAMES[ Math.floor( Math.random()* COLOR_NAMES.length ) ]; 
+} 
+
 function newGame(){ 
   grid = Array.from( {length:MAX_ROWS}, ()=>Array(COLS).fill(null) ); 
   const startingRows = Math.min( 5+ Math.floor( (level-1)/2 ), 8 ); 
-  for( let r=0; r<startingRows; r++ ){ for( let c=0; c<COLS; c++ ){ grid[r][c] = randomColor(); } } 
-  currentColor = randomColor(); nextColor = randomColor(); 
-  misses = 0; shooting = false; shot = null; render(); 
-} 
-function cellPos(r,c){ const offset = (r%2) ? R : 0; return { x: R+ c*R*2+ offset, y: R+ r*ROW_H+ 6 }; } 
-function drawBubble( x, y, radius, color, alpha=1 ){ 
-  const data = COLORS[color]; 
-  ctx.save(); ctx.globalAlpha = alpha; ctx.shadowColor = "rgba(0,0,0,.45)"; ctx.shadowBlur = 8; ctx.shadowOffsetY = 4; 
-  const gradient = ctx.createRadialGradient( x-radius*.35, y-radius*.42, radius*.08, x, y, radius ); 
-  gradient.addColorStop( 0, data.light ); gradient.addColorStop( .45, data.main ); gradient.addColorStop( 1, "#080b13" ); 
-  ctx.fillStyle = gradient; ctx.beginPath(); ctx.arc( x, y, radius, 0, Math.PI*2 ); ctx.fill(); 
-  ctx.restore(); 
-} 
-function render(){ 
-  ctx.clearRect( 0, 0, W, H ); 
-  for( let r=0; r<MAX_ROWS; r++ ){ for( let c=0; c<COLS; c++ ){ if( grid[r][c] ){ const p = cellPos(r,c); drawBubble( p.x, p.y, R-.7, grid[r][c] ); } } } 
-  aimAngle += (targetAngle - aimAngle) * 0.2; 
-  if(shot){ drawBubble( shot.x, shot.y, R-.5, shot.color ); }
-  if(running && !shooting && Math.abs(targetAngle - aimAngle) > 0.01) { requestAnimationFrame(render); }
-} 
-function updatePointer( clientX, clientY ){ 
-  if(!gameRect) gameRect = game.getBoundingClientRect(); 
-  const x = clientX - gameRect.left, y = clientY - gameRect.top; 
-  let dx = x - (W/2), dy = y - (H - 8); 
-  if( dy > -5 ) dy = -5; 
-  targetAngle = Math.max( -68, Math.min( 68, Math.atan2( dx, -dy ) * ( 180 / Math.PI ) ) ); 
+  for( let r=0; r<startingRows; r++ ){ 
+    for( let c=0; c<COLS; c++ ){ 
+      grid[r][c] = randomColor(); 
+    } 
+  } 
+  currentColor = randomColor(); 
+  nextColor = randomColor(); 
+  misses = 0; 
+  shooting = false; 
+  shot = null; 
   render(); 
 } 
-game.addEventListener( "pointerdown", function(e){ if( !running || shooting ) return; pointerDown = true; updatePointer( e.clientX, e.clientY ); }); 
-game.addEventListener( "pointermove", function(e){ if( !pointerDown || !running ) return; updatePointer( e.clientX, e.clientY ); }); 
-game.addEventListener( "pointerup", function(){ pointerDown = false; }); 
 
-// Submit Payout Handler
+function cellPos(r,c){ 
+  const offset = (r%2) ? R : 0; 
+  return { x: R+ c*R*2+ offset, y: R+ r*ROW_H+ 6 }; 
+} 
+
+function drawBubble( x, y, radius, color, alpha=1 ){ 
+  const data = COLORS[color]; 
+  ctx.save(); 
+  ctx.globalAlpha = alpha; 
+  ctx.shadowColor = "rgba(0,0,0,.45)"; 
+  ctx.shadowBlur = 8; 
+  ctx.shadowOffsetY = 4; 
+  const gradient = ctx.createRadialGradient( x-radius*.35, y-radius*.42, radius*.08, x, y, radius ); 
+  gradient.addColorStop( 0, data.light ); 
+  gradient.addColorStop( .45, data.main ); 
+  gradient.addColorStop( 1, "#080b13" ); 
+  ctx.fillStyle = gradient; 
+  ctx.beginPath(); 
+  ctx.arc( x, y, radius, 0, Math.PI*2 ); 
+  ctx.fill(); 
+  ctx.shadowBlur=0; 
+  ctx.strokeStyle = "rgba(255,255,255,.28)"; 
+  ctx.lineWidth=1.5; 
+  ctx.stroke(); 
+  ctx.fillStyle = "rgba(255,255,255,.5)"; 
+  ctx.beginPath(); 
+  ctx.ellipse( x-radius*.35, y-radius*.42, radius*.25, radius*.13, -.35, 0, Math.PI*2 ); 
+  ctx.fill(); 
+  ctx.restore(); 
+} 
+
+function render(){ 
+  ctx.clearRect( 0, 0, W, H ); 
+  ctx.fillStyle = "rgba(255,255,255,.13)"; 
+  for( let i=0; i<25; i++ ){ 
+    const x = (i*97)%W; 
+    const y = 8+ ((i*53)% Math.max( 100, H-90 )); 
+    ctx.beginPath(); 
+    ctx.arc( x, y, 1, 0, Math.PI*2 ); 
+    ctx.fill(); 
+  } 
+  const dangerY = H-75; 
+  ctx.strokeStyle = "rgba(255,55,85,.22)"; 
+  ctx.setLineDash([ 6, 8 ]); 
+  ctx.beginPath(); 
+  ctx.moveTo( 0, dangerY ); 
+  ctx.lineTo( W, dangerY ); 
+  ctx.stroke(); 
+  ctx.setLineDash([]); 
+
+  for( let r=0; r<MAX_ROWS; r++ ){ 
+    for( let c=0; c<COLS; c++ ){ 
+      if( grid[r][c] ){ 
+        const p = cellPos(r,c); 
+        drawBubble( p.x, p.y, R-.7, grid[r][c] ); 
+      } 
+    } 
+  } 
+
+  aimAngle += (targetAngle - aimAngle) * 0.2;
+
+  drawShooter(); 
+
+  if(shot){ 
+    drawBubble( shot.x, shot.y, R-.5, shot.color ); 
+  }
+  
+  if(running && !shooting && Math.abs(targetAngle - aimAngle) > 0.01) {
+    requestAnimationFrame(render);
+  }
+} 
+
+function drawShooter(){ 
+  const sx = W/2; 
+  const sy = H - 8; 
+
+  if( running && !shooting ){ 
+    const rad = aimAngle * Math.PI / 180; 
+    let currX = sx + Math.sin(rad) * 30; 
+    let currY = sy - Math.cos(rad) * 30; 
+    let vx = Math.sin(rad); 
+    let vy = -Math.cos(rad); 
+    let remainingDist = 1000; 
+
+    ctx.save(); 
+    ctx.strokeStyle = COLORS[currentColor] ? COLORS[currentColor].main : "rgba(0, 243, 255, 0.8)"; 
+    ctx.lineWidth = 2.5; 
+    ctx.setLineDash([ 4, 4 ]); 
+    ctx.shadowColor = COLORS[currentColor] ? COLORS[currentColor].main : "#00f3ff"; 
+    ctx.shadowBlur = 8; 
+    ctx.beginPath(); 
+    ctx.moveTo(currX, currY); 
+
+    while (remainingDist > 0) {
+      let nextX = currX + vx * remainingDist;
+      let nextY = currY + vy * remainingDist;
+      let hitWall = false;
+
+      if (nextX <= R) {
+        let distToWall = (R - currX) / vx;
+        currX = R;
+        currY = currY + vy * distToWall;
+        vx = -vx; 
+        remainingDist -= distToWall;
+        hitWall = true;
+      } 
+      else if (nextX >= W - R) {
+        let distToWall = ((W - R) - currX) / vx;
+        currX = W - R;
+        currY = currY + vy * distToWall;
+        vx = -vx; 
+        remainingDist -= distToWall;
+        hitWall = true;
+      } else {
+        currX = nextX;
+        currY = nextY;
+        remainingDist = 0;
+      }
+      ctx.lineTo(currX, currY);
+      if (!hitWall) break;
+    }
+
+    ctx.stroke(); 
+    ctx.restore(); 
+  } 
+
+  ctx.save(); 
+  ctx.translate( sx, sy ); 
+  ctx.rotate( aimAngle * Math.PI / 180 ); 
+  const grad = ctx.createLinearGradient( -11, 0, 11, 0 ); 
+  grad.addColorStop( 0, "#68758f" ); 
+  grad.addColorStop( .5, "#263047" ); 
+  grad.addColorStop( 1, "#111827" ); 
+  ctx.fillStyle = grad; 
+  ctx.beginPath(); 
+  ctx.roundRect( -11, -68, 22, 68, 10 ); 
+  ctx.fill(); 
+  ctx.strokeStyle = "#7b89a4"; 
+  ctx.lineWidth = 2; 
+  ctx.stroke(); 
+  ctx.restore(); 
+
+  const rad = aimAngle * Math.PI / 180;
+  const bubbleX = sx + Math.sin(rad) * 48;
+  const bubbleY = sy - Math.cos(rad) * 48;
+  drawBubble( bubbleX, bubbleY, R+1, currentColor ); 
+
+  ctx.fillStyle = "#7f899d"; 
+  ctx.font = "9px Arial"; 
+  ctx.textAlign = "center"; 
+  ctx.fillText( "NEXT", W-35, H-36 ); 
+  drawBubble( W-35, H-15, R*.8, nextColor ); 
+} 
+
+function updatePointer( clientX, clientY ){ 
+  if(!gameRect) gameRect = game.getBoundingClientRect(); 
+  const x = clientX - gameRect.left; 
+  const y = clientY - gameRect.top; 
+  const sx = W/2; 
+  const sy = H - 8; 
+
+  let dx = x - sx; 
+  let dy = y - sy; 
+  if( dy > -5 ) dy = -5; 
+
+  let degrees = Math.atan2( dx, -dy ) * ( 180 / Math.PI ); 
+  targetAngle = Math.max( -68, Math.min( 68, degrees ) ); 
+  render(); 
+} 
+
+game.addEventListener( "pointerdown", function(e){ 
+  if( !running || shooting ) return; 
+  
+  if(!gameRect) gameRect = game.getBoundingClientRect(); 
+  const x = e.clientX - gameRect.left; 
+  const y = e.clientY - gameRect.top;
+  
+  const nextX = W - 35;
+  const nextY = H - 15;
+  const dist = Math.sqrt((x - nextX)*(x - nextX) + (y - nextY)*(y - nextY));
+  
+  if( dist <= R + 10 ){
+    let temp = currentColor;
+    currentColor = nextColor;
+    nextColor = temp;
+    render();
+    return; 
+  }
+
+  pointerDown = true; 
+  try{ game.setPointerCapture( e.pointerId ); }catch(err){} 
+  updatePointer( e.clientX, e.clientY ); 
+}); 
+
+game.addEventListener( "pointermove", function(e){ 
+  if( !pointerDown || !running ) return; 
+  updatePointer( e.clientX, e.clientY ); 
+}); 
+
+game.addEventListener( "pointerup", function(e){ 
+  if( !pointerDown ) return; 
+  pointerDown = false; 
+  if( running && !shooting ){ 
+    shoot(); 
+  } 
+}); 
+
+game.addEventListener( "pointercancel", function(){ 
+  pointerDown = false; 
+}); 
+
+function shoot(){ 
+  if( !running || shooting || shot ) return; 
+  shooting = true; 
+  shots++; 
+  shotsEl.textContent = shots; 
+  playSound('shoot'); 
+  const rad = aimAngle * Math.PI / 180; 
+  const sy = H - 8; 
+  shot = { 
+    x: W/2 + Math.sin(rad) * 48, 
+    y: sy - Math.cos(rad) * 48, 
+    vx: Math.sin(rad) * 9.5, 
+    vy: -Math.cos(rad) * 9.5, 
+    color: currentColor 
+  }; 
+  currentColor = nextColor; 
+  nextColor = randomColor(); 
+  
+  render(); 
+
+  lastTime = performance.now(); 
+  requestAnimationFrame( updateShot ); 
+} 
+
+function updateShot(now){ 
+  if( !running || !shot ){ 
+    shooting = false; 
+    shot = null; 
+    render(); 
+    return; 
+  } 
+  const dt = Math.min( 20, now - lastTime ) / 16.67; 
+  lastTime = now; 
+  shot.x += shot.vx * dt; 
+  shot.y += shot.vy * dt; 
+
+  if( shot.x <= R ){ 
+    shot.x = R; 
+    shot.vx = Math.abs( shot.vx ); 
+    playSound('bounce'); 
+  } 
+  if( shot.x >= W - R ){ 
+    shot.x = W - R; 
+    shot.vx = -Math.abs( shot.vx ); 
+    playSound('bounce'); 
+  } 
+
+  if( shotHitsBubble() ){ 
+    attachShot(); 
+    return; 
+  } 
+
+  if( shot.y <= R + 6 ){ 
+    shot.y = R + 6; 
+    attachShot(); 
+    return; 
+  } 
+
+  render(); 
+  requestAnimationFrame( updateShot ); 
+} 
+
+function shotHitsBubble(){ 
+  if(!shot) return false; 
+  for( let r=0; r<MAX_ROWS; r++ ){ 
+    for( let c=0; c<COLS; c++ ){ 
+      if(!grid[r][c]) continue; 
+      const p = cellPos(r,c); 
+      const dx = shot.x - p.x; 
+      const dy = shot.y - p.y; 
+      const dist = Math.sqrt( dx*dx + dy*dy ); 
+      if( dist < R * 1.9 ){ 
+        return true; 
+      } 
+    } 
+  } 
+  return false; 
+} 
+
+function attachShot(){ 
+  if(!shot) return; 
+  const target = nearestEmptyCell( shot.x, shot.y ); 
+  if(!target){ 
+    shot = null; 
+    shooting = false; 
+    endGame(); 
+    return; 
+  } 
+  grid[target.r][target.c] = shot.color; 
+  shot = null; 
+  shooting = false; 
+  const matches = findMatches( target.r, target.c ); 
+  if( matches.length >= 3 ){ 
+    for( const p of matches ){ 
+      grid[p.r][p.c] = null; 
+    } 
+    playSound('pop'); 
+    score += matches.length * 10; 
+    if( matches.length >= 5 ){ 
+      score += (matches.length - 4) * 10; 
+    } 
+    removeFloating(); 
+    misses = 0; 
+  } else { 
+    misses++; 
+    if( misses >= 5 ){ 
+      misses = 0; 
+      addPenaltyRow(); 
+    } 
+  } 
+  scoreEl.textContent = score; 
+  if( boardEmpty() ){ 
+    level++; 
+    levelEl.textContent = level; 
+    addLevelRows(); 
+  } 
+  checkDanger(); 
+  render(); 
+} 
+
+function nearestEmptyCell( x, y ){ 
+  let best = null; 
+  let bestDist = Infinity; 
+  for( let r=0; r<MAX_ROWS; r++ ){ 
+    for( let c=0; c<COLS; c++ ){ 
+      if(grid[r][c]) continue; 
+      const p = cellPos(r,c); 
+      const dx = x - p.x; 
+      const dy = y - p.y; 
+      const d = dx*dx + dy*dy; 
+      if( d < bestDist ){ 
+        bestDist = d; 
+        best = { r:r, c:c }; 
+      } 
+    } 
+  } 
+  return best; 
+} 
+
+function findMatches( sr, sc ){ 
+  const color = grid[sr][sc]; 
+  if(!color) return []; 
+  const queue = [ { r:sr, c:sc } ]; 
+  const visited = new Set(); 
+  const result = []; 
+  while(queue.length){ 
+    const p = queue.shift(); 
+    const key = p.r + "," + p.c; 
+    if( visited.has(key) ) continue; 
+    visited.add(key); 
+    if( p.r < 0 || p.r >= MAX_ROWS || p.c < 0 || p.c >= COLS ) continue; 
+    if( grid[p.r][p.c] !== color ) continue; 
+    result.push(p); 
+    for( const n of neighbors( p.r, p.c ) ){ 
+      queue.push(n); 
+    } 
+  } 
+  return result; 
+} 
+
+function neighbors( r, c ){ 
+  if(r%2===0){ 
+    return [ {r:r,c:c-1}, {r:r,c:c+1}, {r:r-1,c:c-1}, {r:r-1,c:c}, {r:r+1,c:c-1}, {r:r+1,c:c} ]; 
+  } 
+  return [ {r:r,c:c-1}, {r:r,c:c+1}, {r:r-1,c:c}, {r:r-1,c:c+1}, {r:r+1,c:c}, {r:r+1,c:c+1} ]; 
+} 
+
+function removeFloating(){ 
+  const connected = new Set(); 
+  const queue = []; 
+  for( let c=0; c<COLS; c++ ){ 
+    if(grid[0][c]){ 
+      queue.push({ r:0, c:c }); 
+    } 
+  } 
+  while(queue.length){ 
+    const p = queue.shift(); 
+    const key = p.r + "," + p.c; 
+    if( connected.has(key) ) continue; 
+    if( p.r < 0 || p.r >= MAX_ROWS || p.c < 0 || p.c >= COLS ) continue; 
+    if(!grid[p.r][p.c]) continue; 
+    connected.add(key); 
+    for( const n of neighbors( p.r, p.c ) ){ 
+      queue.push(n); 
+    } 
+  } 
+  for( let r=0; r<MAX_ROWS; r++ ){ 
+    for( let c=0; c<COLS; c++ ){ 
+      if( grid[r][c] && !connected.has( r + "," + c ) ){ 
+        grid[r][c] = null; 
+        score += 5; 
+      } 
+    } 
+  } 
+} 
+
+function addPenaltyRow(){ 
+  for( let r=MAX_ROWS-1; r>0; r-- ){ 
+    grid[r] = grid[r-1].slice(); 
+  } 
+  grid[0] = Array.from( {length:COLS}, ()=>randomColor() ); 
+} 
+
+function addLevelRows(){ 
+  const count = Math.min( 3 + Math.floor(level/2), 7 ); 
+  for( let i=0; i<count; i++ ){ 
+    for( let r=MAX_ROWS-1; r>0; r-- ){ 
+      grid[r] = grid[r-1].slice(); 
+    } 
+    grid[0] = Array.from( {length:COLS}, ()=>randomColor() ); 
+  } 
+} 
+
+function boardEmpty(){ 
+  for( let r=0; r<MAX_ROWS; r++ ){ 
+    for( let c=0; c<COLS; c++ ){ 
+      if(grid[r][c]) return false; 
+    } 
+  } 
+  return true; 
+} 
+
+function checkDanger(){ 
+  const danger = H - 75; 
+  for( let r=0; r<MAX_ROWS; r++ ){ 
+    for( let c=0; c<COLS; c++ ){ 
+      if(!grid[r][c]) continue; 
+      const p = cellPos(r,c); 
+      if( p.y + R >= danger ){ 
+        endGame(); 
+        return; 
+      } 
+    } 
+  } 
+} 
+
+function endGame(){ 
+  if(!running) return; 
+  running = false; 
+  shooting = false; 
+  shot = null; 
+  pointerDown = false; 
+  playSound('gameover'); 
+  result.textContent = "Score: " + score + " • Level: " + level; 
+  overlay.style.display = "flex"; 
+  render(); 
+} 
+
+restart.addEventListener( "click", function(e){ 
+  e.stopPropagation(); 
+  score = 0; 
+  shots = 0; 
+  level = 1; 
+  running = true; 
+  shooting = false; 
+  pointerDown = false; 
+  shot = null; 
+  scoreEl.textContent = "0"; 
+  shotsEl.textContent = "0"; 
+  levelEl.textContent = "1"; 
+  overlay.style.display = "none"; 
+  newGame(); 
+}); 
+
+// Submit Payout Handler (Testing ke liye score limit abhi 10 kar di hai)
 submitPayoutBtn.addEventListener("click", () => {
   const phone = paytmNumberInput.value.trim();
   if(phone.length !== 10){ alert("Please enter a valid 10-digit mobile number!"); return; }
-  if(score < 10){ alert("You need at least 10 score to redeem ₹50!"); return; }
   
+  // TESTING KE LIYE: Yahan limit 10 rakhi hai, baad me 100000 kar lena
+  if(score < 10){ alert("You need at least 10 score to redeem ₹50!"); return; }
 
   submitPayoutBtn.disabled = true; submitPayoutBtn.textContent = "Submitting...";
 
@@ -244,7 +781,7 @@ function checkUserStatus(){
 }
 
 // ================= ADMIN PANEL SECRET =================
-// Game screen par 5 baar fast tap karke password "7247" dalne par aapka Admin Panel khul jayega 
+// Game screen par 5 baar fast tap karke password "7247" dalne par Admin Panel khulega
 let secretClicks = 0;
 game.addEventListener("click", () => {
   secretClicks++;
@@ -280,7 +817,7 @@ function openAdminPanel(){
 
 window.markSuccess = function(phone){
   fetch(SCRIPT_URL, {
-    method: "POST",
+    method:="POST",
     body: JSON.stringify({ action: "updateStatus", phone: phone, newStatus: "Success" })
   }).then(res => res.json()).then(data => {
     alert("Updated successfully!");
@@ -289,7 +826,9 @@ window.markSuccess = function(phone){
 };
 
 newGame(); 
-aimAngle = 0; targetAngle = 0; render(); 
+aimAngle = 0; 
+targetAngle = 0;
+render(); 
 </script> 
 </body> 
 </html>
