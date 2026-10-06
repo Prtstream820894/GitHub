@@ -4,30 +4,156 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PRT STREAM</title>
+
 <script src="https://pl31648697.profitableratecpmnetwork.com/10/23/13/1023136af39c5d41f0a03fc1556362b9.js"></script>
+
 <style>
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: #000;
+html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#000;
+    font-family:Arial,sans-serif;
 }
 
-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+#loader{
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.prt{
+    font-size:65px;
+    font-weight:bold;
+    color:#ff0000;
+    text-shadow:0 0 20px red;
+}
+
+.stream{
+    font-size:45px;
+    font-weight:bold;
+    color:gold;
+    text-shadow:0 0 20px gold;
+    margin-bottom:25px;
+}
+
+.text{
+    color:white;
+    text-align:center;
+    font-size:24px;
+    margin-bottom:25px;
+}
+
+.text span{
+    color:gold;
+}
+
+.circle{
+    position:relative;
+    width:180px;
+    height:180px;
+}
+
+svg{
+    width:180px;
+    height:180px;
+    transform:rotate(-90deg);
+}
+
+circle{
+    fill:none;
+    stroke-width:10;
+}
+
+.bg{
+    stroke:#333;
+}
+
+.progress{
+    stroke:gold;
+    stroke-linecap:round;
+    stroke-dasharray:502;
+    stroke-dashoffset:0;
+}
+
+#count{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    font-size:50px;
+    font-weight:bold;
+}
+
+iframe{
+    width:100%;
+    height:100%;
+    border:none;
+    display:none;
 }
 </style>
 </head>
 <body>
 
+<div id="loader">
+    <div class="prt">PRT</div>
+    <div class="stream">STREAM</div>
+
+    <div class="text">
+        Your Passcode Ready<br>
+        <span>For a Second</span>
+    </div>
+
+    <div class="circle">
+        <svg>
+            <circle class="bg" cx="90" cy="90" r="80"></circle>
+            <circle class="progress" id="progress" cx="90" cy="90" r="80"></circle>
+        </svg>
+        <div id="count">10</div>
+    </div>
+</div>
+
 <iframe
+    id="mainFrame"
     src="https://server-iota-nine-71.vercel.app/api/otp"
     allowfullscreen>
 </iframe>
+
+<script>
+let timeLeft = 10;
+const count = document.getElementById("count");
+const progress = document.getElementById("progress");
+
+const circumference = 2 * Math.PI * 80;
+
+const timer = setInterval(() => {
+
+    timeLeft--;
+    count.innerText = timeLeft;
+
+    const offset =
+        circumference - ((10 - timeLeft) / 10) * circumference;
+
+    progress.style.strokeDashoffset = offset;
+
+    if(timeLeft <= 0){
+        clearInterval(timer);
+
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("mainFrame").style.display = "block";
+    }
+},1000);
+</script>
+
 <script src="https://pl31648699.profitableratecpmnetwork.com/0c/ea/1c/0cea1ccd8d669bb542cb40c3555c1949.js"></script>
+
 </body>
 </html>
